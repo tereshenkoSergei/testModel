@@ -15,6 +15,9 @@
           <e p="Logic" t="Include">
             <e p="AbstractResultHandler.cs" t="Include" />
             <e p="AbstractTestModeler.cs" t="Include" />
+            <e p="Charts" t="Include">
+              <e p="TransactsToChartElementsConverter.cs" t="Include" />
+            </e>
             <e p="StudentCreator.cs" t="Include" />
             <e p="TaskCreator.cs" t="Include" />
           </e>
