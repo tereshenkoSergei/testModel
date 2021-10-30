@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ContentModelStore">
+    <e p="C:\project\TestModel" t="IncludeFlat">
+      <e p="packages" t="ExcludeRecursive" />
+      <e p="TestModel" t="IncludeRecursive">
+        <e p="App.config" t="Include" />
+        <e p="App.xaml" t="Include" />
+        <e p="App.xaml.cs" t="Include" />
+        <e p="bin" t="ExcludeRecursive" />
+        <e p="Code" t="Include">
+          <e p="Additions" t="Include">
+            <e p="StandardTesterModeler.cs" t="Include" />
+          </e>
+          <e p="Logic" t="Include">
+            <e p="AbstractResultHandler.cs" t="Include" />
+            <e p="AbstractTestModeler.cs" t="Include" />
+            <e p="StudentCreator.cs" t="Include" />
+            <e p="TaskCreator.cs" t="Include" />
+          </e>
+          <e p="MainViewModel.cs" t="Include" />
+          <e p="Result.cs" t="Include" />
+          <e p="Transacts" t="Include">
+            <e p="Student.cs" t="Include" />
+            <e p="Task.cs" t="Include" />
+          </e>
+        </e>
+        <e p="MainWindow.xaml" t="Include" />
+        <e p="MainWindow.xaml.cs" t="Include" />
+        <e p="obj" t="ExcludeRecursive" />
+        <e p="packages.config" t="Include" />
+        <e p="Properties" t="Include">
+          <e p="Annotations.cs" t="Include" />
+          <e p="AssemblyInfo.cs" t="Include" />
+          <e p="Resources.Designer.cs" t="Include" />
+          <e p="Resources.resx" t="Include" />
+        </e>
+        <e p="TestModel.csproj" t="IncludeRecursive" />
+      </e>
+      <e p="TestModel.sln" t="IncludeFlat" />
+    </e>
+    <e p="C:\Users\sterd\.Rider2018.3\system\extResources" t="IncludeRecursive" />
+    <e p="C:\Users\sterd\.Rider2018.3\system\resharper-host\local\Transient\ReSharperHost\v183\SolutionCaches\_TestModel.-2134040764.00" t="ExcludeRecursive" />
+  </component>
+</project>
