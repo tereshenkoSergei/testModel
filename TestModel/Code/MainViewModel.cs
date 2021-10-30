@@ -1,4 +1,4 @@
-using System;
+	using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
@@ -8,6 +8,7 @@ using TestModel.Annotations;
 using LiveCharts;
 using LiveCharts.Wpf;
 using TestModel.Code.Logic;
+using TestModel.Code.Logic.Charts;
 using TestModel.Code.Transacts;
 
 namespace TestModel.Code
@@ -100,6 +101,21 @@ namespace TestModel.Code
             //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
             //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
             TaskList = TaskCreator.GenerateTasks(10, -4, 4);
+            pockets = TransactsToChartElementsConverter.GetStudentDistributionExperemental(StudentList).Values.Count;
+            Labels = new string[pockets+1];
+            for (int i = 0; i <= pockets; i++)
+            {
+                Labels[i] = (-4d + i * 8d / pockets).ToString();
+            }
+
+            //start of diagram init
+            SeriesCollection = new SeriesCollection
+            {
+                TransactsToChartElementsConverter.GetStudentDistributionExperemental(StudentList)
+//                TransactsToChartElementsConverter.GetStudentDistribution(StudentList)
+            };
+
+            YFormatter = value => value.ToString("F1");
         }
 
         [NotifyPropertyChangedInvocator]
