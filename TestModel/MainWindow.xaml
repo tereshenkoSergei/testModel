@@ -7,61 +7,99 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1000" Width="1000">
     <Grid>
-   
-                
+
+        <TabControl>
+            <TabItem Header="Вкладка 1">
+
                 <DockPanel LastChildFill="True">
+                    <StackPanel DockPanel.Dock="Top" Height="300">
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="170" />
+                            <Slider
+                                Value="{Binding StudentAmount}"
+                                DockPanel.Dock="Left"
+                                Minimum="1"
+                                Maximum="200"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding StudentAmount}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Количество заданий" Width="170" />
+                            <Slider
+                                Value="{Binding TaskAmount}"
+                                DockPanel.Dock="Left"
+                                Minimum="1"
+                                Maximum="200"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding TaskAmount}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="170" />
+                            <Slider
+                                Value="{Binding MaxComplexity}"
+                                DockPanel.Dock="Left"
+                                Minimum="{Binding MinComplexity}"
+                                Maximum="4"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="170" />
+                            <Slider
+                                Value="{Binding MinComplexity}"
+                                DockPanel.Dock="Left"
+                                Minimum="-4"
+                                Maximum="4"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MinComplexity}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="170" />
+                            <Slider
+                                Value="{Binding MaxLevel}"
+                                DockPanel.Dock="Left"
+                                Minimum="{Binding MinLevel}"
+                                Maximum="4"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MaxLevel}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="170" />
+                            <Slider
+                                Value="{Binding MinLevel}"
+                                DockPanel.Dock="Left"
+                                Minimum="-4"
+                                Maximum="4"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MinLevel}" />
+                        </DockPanel>
+                        <Button Content="Сгенерировать штуки (текст потом поменяю)" Command="{Binding GenerateStudentsCommand}" />
+                    </StackPanel>
 
-            <StackPanel DockPanel.Dock="Top" Height="300">
-                <DockPanel>
-                    <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="170" />
-                    <Slider
-                        Value="{Binding StudentAmount}"
-                        DockPanel.Dock="Left"
-                        Minimum="1"
-                        Maximum="50"
-                        Width="200" />
-                    <Label DockPanel.Dock="Left" Content="{Binding StudentAmount}" />
-                </DockPanel>
-                <DockPanel>
-                    <Label DockPanel.Dock="Left" Content="Количество заданий" Width="170" />
-                    <Slider
-                        Value="{Binding TaskAmount}"
-                        DockPanel.Dock="Left"
-                        Minimum="1"
-                        Maximum="50"
-                        Width="200" />
-                    <Label DockPanel.Dock="Left" Content="{Binding TaskAmount}" />
-                </DockPanel>
-                <DockPanel>
-                    <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="170" />
-                    <Slider
-                        Value="{Binding MaxComplexity}"
-                        DockPanel.Dock="Left"
-                        Minimum="{Binding MinComplexity}"
-                        Maximum="4"
-                        Width="200" />
-                    <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
-                </DockPanel>
-                <DockPanel>
-                    <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="170" />
-                    <Slider
-                        Value="{Binding MinComplexity}"
-                        DockPanel.Dock="Left"
-                        Minimum="-4"
-                        Maximum="4"
-                        Width="200" />
-                    <Label DockPanel.Dock="Left" Content="{Binding MinComplexity}" />
+
+                    <!-- -->
+                    <!-- <Button DockPanel.Dock="Right" Background="DarkGreen" Content="Правая кнопка" /> -->
+                    <!-- <Button Background="LightGreen" Content="Центр" /> -->
                 </DockPanel>
 
-                <Button Content="Сгенерировать штуки (текст потом поменяю)" />
-            </StackPanel>
 
-         
-            <!-- -->
-            <!-- <Button DockPanel.Dock="Right" Background="DarkGreen" Content="Правая кнопка" /> -->
-            <!-- <Button Background="LightGreen" Content="Центр" /> -->
-        </DockPanel>
+            </TabItem>
+            <TabItem Header="Вкладка 2">
 
-        
+
+                <Grid>
+                    <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="Salesman" Labels="{Binding Labels}" />
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Sold Apps" LabelFormatter="{Binding Formatter}" />
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                </Grid>
+
+            </TabItem>
+        </TabControl>
+
     </Grid>
 </Window>

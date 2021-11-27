@@ -1,7 +1,24 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="88bbc1e8-df0a-4a74-bc03-3bcfa89e3182" name="Default Changelist" comment="" />
+    <list default="true" id="88bbc1e8-df0a-4a74-bc03-3bcfa89e3182" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestModel/.idea/contentModel.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestModel/.idea/contentModel.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.TestModel/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.TestModel/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/Code/MainViewModel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/Code/MainViewModel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/MainWindow.xaml" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/MainWindow.xaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/TestModel.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/TestModel.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/bin/Debug/TestModel.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/bin/Debug/TestModel.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/bin/Debug/TestModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/bin/Debug/TestModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/MainWindow.baml" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/MainWindow.baml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/MainWindow.g.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/MainWindow.g.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/MainWindow.g.i.cs" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/MainWindow.g.i.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.csproj.CoreCompileInputs.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.csproj.CoreCompileInputs.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.csprojAssemblyReference.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.csprojAssemblyReference.cache" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.exe" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.g.resources" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.g.resources" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.pdb" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel.pdb" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel_MarkupCompile.cache" beforeDir="false" afterPath="$PROJECT_DIR$/TestModel/obj/Debug/TestModel_MarkupCompile.cache" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,72 +30,58 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/TestModel/Code/MainViewModel.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="-197">
+              <caret line="134" column="85" selection-start-line="134" selection-start-column="85" selection-end-line="134" selection-end-column="85" />
               <folding>
-                <marker date="1635573816408" expanded="true" signature="6:298" ph="..." />
-                <marker date="1635573816408" expanded="true" signature="324:2957" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="402:2955" ph="{...}" />
-                <marker date="1635573816408" expanded="false" signature="417:2146" ph="Vars" />
-                <marker date="1635573816408" expanded="true" signature="694:891" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="755:881" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="922:1110" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="980:1100" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1147:1359" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1223:1349" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1396:1608" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1472:1598" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1650:1841" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1709:1831" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1877:2059" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="1933:2049" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="2380:2704" ph="{...}" />
-                <marker date="1635573816408" expanded="true" signature="2474:2633" ph="/* StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4); ... */" />
-                <marker date="1635573816408" expanded="true" signature="2842:2949" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="6:332" ph="..." />
+                <marker date="1638024631416" expanded="true" signature="358:4443" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="436:4441" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="451:2816" ph="Vars" />
+                <marker date="1638024631416" expanded="false" signature="840:1037" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="901:1027" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="1068:1265" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="1139:1255" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="1296:1493" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="1367:1483" ph="{...}" />
+                <marker date="1638024631416" expanded="false" signature="1523:1711" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="1581:1701" ph="{...}" />
+                <marker date="1638024631416" expanded="false" signature="1747:1959" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="1823:1949" ph="{...}" />
+                <marker date="1638024631416" expanded="false" signature="1995:2207" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="2071:2197" ph="{...}" />
+                <marker date="1638024631416" expanded="false" signature="2248:2439" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="2307:2429" ph="{...}" />
+                <marker date="1638024631416" expanded="false" signature="2474:2656" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="2530:2646" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="3021:3138" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="3276:3383" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="3453:4334" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="3565:3724" ph="/* StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4); ... */" />
+                <marker date="1638024631416" expanded="true" signature="3907:4094" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="3958:4080" ph="{...}" />
+                <marker date="1638024631416" expanded="true" signature="4390:4435" ph="{...}" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/StudentCreator.cs">
+        <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="273">
-              <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+            <state relative-caret-position="102">
+              <caret line="11" column="61" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="61" />
               <folding>
-                <marker date="1634314963876" expanded="false" signature="6:79" ph="..." />
-                <marker date="1634314963876" expanded="true" signature="111:2664" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="145:2662" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="250:703" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="408:553" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="888:1505" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="1167:1462" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="1613:2399" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="1820:2314" ph="{...}" />
-                <marker date="1634314963876" expanded="true" signature="2548:2656" ph="{...}" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TestModel/MainWindow.xaml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
-              <folding>
-                <marker date="1635573671795" expanded="true" signature="0:2919" ph="&lt;&lt;Grid&gt;&#10;        &lt;TabControl&gt;&#10;            &lt;TabItem Header=&quot;График&quot;&gt;&#10;                &#10;                &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                    &lt;lvc:CartesianChart.AxisY&gt;&#10;                        &lt;lvc:Axis Title=&quot;Level&quot; LabelFormatter=&quot;{Binding YFormatter}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:Axis Title=&quot;Pocket&quot; Labels=&quot;{Binding Labels}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisX&gt;&#10;                &lt;/lvc:CartesianChart&gt;&#10;&#10;            &lt;/TabItem&gt;&#10;            &lt;TabItem Header=&quot;Генерация&quot;&gt;&#10;                &#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;&#10;            &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;                &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;            &lt;/StackPanel&gt;&#10;&#10;         &#10;            &lt;!-- --&gt;&#10;            &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;            &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;        &lt;/DockPanel&gt;&#10;            &lt;/TabItem&gt;&#10;           &#10;            &#10;        &lt;/TabControl&gt;&#10;        &#10;    &lt;/Grid&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="481:2909" ph="&lt;&lt;TabControl&gt;&#10;            &lt;TabItem Header=&quot;График&quot;&gt;&#10;                &#10;                &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                    &lt;lvc:CartesianChart.AxisY&gt;&#10;                        &lt;lvc:Axis Title=&quot;Level&quot; LabelFormatter=&quot;{Binding YFormatter}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:Axis Title=&quot;Pocket&quot; Labels=&quot;{Binding Labels}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisX&gt;&#10;                &lt;/lvc:CartesianChart&gt;&#10;&#10;            &lt;/TabItem&gt;&#10;            &lt;TabItem Header=&quot;Генерация&quot;&gt;&#10;                &#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;&#10;            &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;                &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;            &lt;/StackPanel&gt;&#10;&#10;         &#10;            &lt;!-- --&gt;&#10;            &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;            &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;        &lt;/DockPanel&gt;&#10;            &lt;/TabItem&gt;&#10;           &#10;            &#10;        &lt;/TabControl&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="525:2887" ph="&lt;&lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;                &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;            &lt;/StackPanel&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="571:2660" ph="&lt;&lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="634:1098" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="762:983" ph="&lt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="1115:1570" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="1240:1458" ph="&lt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="1587:2072" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="1715:1957" ph="&lt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="2089:2554" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;.../&gt;" />
-                <marker date="1635573671795" expanded="true" signature="2218:2439" ph="&lt;.../&gt;" />
+                <marker date="1638024631413" expanded="false" signature="6:148" ph="..." />
+                <marker date="1638024631413" expanded="true" signature="187:2468" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="247:2466" ph="{...}" />
+                <marker date="1638024631413" expanded="false" signature="355:1631" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="534:751" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="1010:1353" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="1080:1294" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="1189:1276" ph="{...}" />
+                <marker date="1638024631413" expanded="false" signature="1734:2460" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="1909:2085" ph="{...}" />
+                <marker date="1638024631413" expanded="true" signature="2230:2422" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -86,11 +89,22 @@
       </file>
     </leaf>
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_BRANCH_BY_REPOSITORY">
+      <map>
+        <entry key="$PROJECT_DIR$" value="main" />
+      </map>
+    </option>
+  </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/TestModel/Code/MainViewModel.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestModel/MainWindow.xaml" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FD824CFB-5500-4855-B9E6-D51B008C90E4/c0/0de61ef0/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestModel/Code/Logic/TaskCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestModel/Code/RelayCommand.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestModel/Code/Logic/StudentCreator.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestModel/Code/Logic/AbstractTestModeler.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestModel/MainWindow.xaml.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/TestModel/Code/Result.cs" root0="FORCE_HIGHLIGHTING" />
@@ -114,23 +128,30 @@
         <option value="$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChatrElementsConverter.cs" />
         <option value="$PROJECT_DIR$/TestModel/Code/Transacts/Student.cs" />
         <option value="$PROJECT_DIR$/TestModel/Code/Logic/StudentCreator.cs" />
-        <option value="$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs" />
+        <option value="$PROJECT_DIR$/TestModel/Code/Charts/StudentsToChartElementsConverter.cs" />
+        <option value="$PROJECT_DIR$/TestModel/Code/Charts/TransactsToChartElementsConverter.cs" />
+        <option value="$PROJECT_DIR$/TestModel/Code/Charts/Combiner.cs" />
+        <option value="$PROJECT_DIR$/TestModel/Code/RelayCommand.cs" />
         <option value="$PROJECT_DIR$/TestModel/MainWindow.xaml" />
+        <option value="$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs" />
         <option value="$PROJECT_DIR$/TestModel/Code/MainViewModel.cs" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="895" />
-    <option name="y" value="-39" />
+    <option name="y" value="-40" />
     <option name="width" value="980" />
     <option name="height" value="1040" />
   </component>
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
     <navigator currentView="SolutionExplorer" proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="AssemblyExplorer" />
+      <pane id="FileSystemExplorer" />
       <pane id="SolutionExplorer">
         <subPane>
           <expand>
@@ -156,13 +177,31 @@
               <item name="Code" type="24d0babc:SolutionExplorerModelNode" />
               <item name="Logic" type="24d0babc:SolutionExplorerModelNode" />
             </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TestModel" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TestModel" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Code" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Logic" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="Charts" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TestModel" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TestModel" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="App.xaml" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
+            <path>
+              <item name="Project" type="784c90a0:SolutionExplorerRootNode" />
+              <item name="TestModel" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="TestModel" type="24d0babc:SolutionExplorerModelNode" />
+              <item name="MainWindow.xaml" type="24d0babc:SolutionExplorerModelNode" />
+            </path>
           </expand>
           <select />
         </subPane>
         <option name="show-all-files" value="false" />
       </pane>
-      <pane id="AssemblyExplorer" />
-      <pane id="FileSystemExplorer" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -219,11 +258,12 @@
       <workItem from="1633694440136" duration="28598000" />
       <workItem from="1634306587856" duration="2019000" />
       <workItem from="1635571238057" duration="650000" />
+      <workItem from="1637923609640" duration="12057000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="31267000" />
+    <option name="totallyTimeSpent" value="46996000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -236,21 +276,22 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.19060403" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Capture Tool" order="3" />
       <window_info id="Favorites" order="4" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.3286119" />
-      <window_info anchor="bottom" id="Debug" order="3" weight="0.39943343" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.398017" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="TODO" order="6" weight="0.3286119" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.3286119" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="8" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.3286119" />
       <window_info anchor="bottom" id="Docker" order="9" show_stripe_button="false" />
       <window_info anchor="bottom" id="XAML Preview" order="10" />
       <window_info anchor="bottom" id="Performance Profiler" order="11" />
@@ -258,7 +299,7 @@
       <window_info anchor="bottom" id="NuGet" order="13" weight="0.3286119" />
       <window_info anchor="bottom" id="Unit Tests" order="14" />
       <window_info anchor="bottom" id="Database Changes" order="15" />
-      <window_info anchor="bottom" id="Version Control" order="16" />
+      <window_info anchor="bottom" id="Version Control" order="16" weight="0.45609066" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
@@ -274,6 +315,46 @@
   </component>
   <component name="UnityProjectConfiguration" hasMinimizedUI="false" />
   <component name="UnityUnitTestConfiguration" currentTestLauncher="NUnit" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="RECENTLY_FILTERED_USER_GROUPS">
+                <collection />
+              </option>
+              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
+                <collection />
+              </option>
+              <option name="COLUMN_ORDER">
+                <list>
+                  <option value="0" />
+                  <option value="1" />
+                  <option value="2" />
+                  <option value="3" />
+                </list>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
+    <option name="RECENT_FILTERS">
+      <map>
+        <entry key="Branch">
+          <value>
+            <list />
+          </value>
+        </entry>
+        <entry key="User">
+          <value>
+            <list />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
       <breakpoints>
@@ -290,19 +371,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TestModel/MainWindow.xaml.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
-          <folding>
-            <marker date="1633696050808" expanded="true" signature="42:307" ph="{...}" />
-            <marker date="1633696050808" expanded="true" signature="49:127" ph="/// Interaction logic for MainWindow.xaml ... " />
-            <marker date="1633696050808" expanded="true" signature="163:305" ph="{...}" />
-            <marker date="1633696050808" expanded="true" signature="197:299" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TestModel/Code/Result.cs">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="306">
@@ -506,66 +574,88 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs" />
+    <entry file="file://$PROJECT_DIR$/.idea/.idea.TestModel/.idea/vcs.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/Charts/Combiner.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="272">
+          <caret line="17" column="13" selection-start-line="17" selection-start-column="13" selection-end-line="17" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestModel/MainWindow.xaml.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="43" selection-start-line="12" selection-start-column="43" selection-end-line="12" selection-end-column="43" />
+          <folding>
+            <marker date="1633696050808" expanded="true" signature="42:307" ph="{...}" />
+            <marker date="1633696050808" expanded="true" signature="49:127" ph="/// Interaction logic for MainWindow.xaml ... " />
+            <marker date="1633696050808" expanded="true" signature="163:305" ph="{...}" />
+            <marker date="1633696050808" expanded="true" signature="197:299" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestModel/Code/RelayCommand.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="296">
+          <caret line="29" column="8" selection-start-line="29" selection-start-column="8" selection-end-line="29" selection-end-column="8" />
+          <folding>
+            <marker date="1638018315655" expanded="true" signature="6:41" ph="..." />
+            <marker date="1638018315655" expanded="true" signature="67:847" ph="{...}" />
+            <marker date="1638018315655" expanded="true" signature="110:845" ph="{...}" />
+            <marker date="1638018315655" expanded="true" signature="276:423" ph="{...}" />
+            <marker date="1638018315655" expanded="true" signature="514:614" ph="{...}" />
+            <marker date="1638018315655" expanded="true" signature="772:830" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/TestModel/MainWindow.xaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="10" column="16" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+        <state relative-caret-position="357">
+          <caret line="31" column="44" selection-start-line="31" selection-start-column="44" selection-end-line="31" selection-end-column="44" />
           <folding>
-            <marker date="1635573671795" expanded="true" signature="0:2919" ph="&lt;&lt;Grid&gt;&#10;        &lt;TabControl&gt;&#10;            &lt;TabItem Header=&quot;График&quot;&gt;&#10;                &#10;                &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                    &lt;lvc:CartesianChart.AxisY&gt;&#10;                        &lt;lvc:Axis Title=&quot;Level&quot; LabelFormatter=&quot;{Binding YFormatter}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:Axis Title=&quot;Pocket&quot; Labels=&quot;{Binding Labels}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisX&gt;&#10;                &lt;/lvc:CartesianChart&gt;&#10;&#10;            &lt;/TabItem&gt;&#10;            &lt;TabItem Header=&quot;Генерация&quot;&gt;&#10;                &#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;&#10;            &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;                &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;            &lt;/StackPanel&gt;&#10;&#10;         &#10;            &lt;!-- --&gt;&#10;            &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;            &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;        &lt;/DockPanel&gt;&#10;            &lt;/TabItem&gt;&#10;           &#10;            &#10;        &lt;/TabControl&gt;&#10;        &#10;    &lt;/Grid&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="481:2909" ph="&lt;&lt;TabControl&gt;&#10;            &lt;TabItem Header=&quot;График&quot;&gt;&#10;                &#10;                &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                    &lt;lvc:CartesianChart.AxisY&gt;&#10;                        &lt;lvc:Axis Title=&quot;Level&quot; LabelFormatter=&quot;{Binding YFormatter}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:Axis Title=&quot;Pocket&quot; Labels=&quot;{Binding Labels}&quot;&gt;&lt;/lvc:Axis&gt;&#10;                    &lt;/lvc:CartesianChart.AxisX&gt;&#10;                &lt;/lvc:CartesianChart&gt;&#10;&#10;            &lt;/TabItem&gt;&#10;            &lt;TabItem Header=&quot;Генерация&quot;&gt;&#10;                &#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;&#10;            &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;                &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;            &lt;/StackPanel&gt;&#10;&#10;         &#10;            &lt;!-- --&gt;&#10;            &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;            &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;        &lt;/DockPanel&gt;&#10;            &lt;/TabItem&gt;&#10;           &#10;            &#10;        &lt;/TabControl&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="525:2887" ph="&lt;&lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;                &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;                &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;            &lt;/StackPanel&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="571:2660" ph="&lt;&lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                    &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt;&#10;                    &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                &lt;/DockPanel&gt; &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="634:1098" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding StudentAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="762:983" ph="&lt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="1115:1570" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding TaskAmount}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;1&quot;&#10;                        Maximum=&quot;50&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="1240:1458" ph="&lt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="1587:2072" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding MaxComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;{Binding MinComplexity}&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="1715:1957" ph="&lt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="2089:2554" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                        Value=&quot;{Binding MinComplexity}&quot;&#10;                        DockPanel.Dock=&quot;Left&quot;&#10;                        Minimum=&quot;-4&quot;&#10;                        Maximum=&quot;4&quot;&#10;                        Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;.../&gt;" />
-            <marker date="1635573671795" expanded="true" signature="2218:2439" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="0:5189" ph="&lt;&lt;Grid&gt;&#10;&#10;        &lt;TabControl&gt;&#10;            &lt;TabItem Header=&quot;Вкладка 1&quot;&gt;&#10;&#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;                    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;                    &lt;/StackPanel&gt;&#10;&#10;&#10;                    &lt;!-- --&gt;&#10;                    &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;                    &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;&#10;            &lt;/TabItem&gt;&#10;            &lt;TabItem Header=&quot;Вкладка 2&quot;&gt;&#10;&#10;&#10;                &lt;Grid&gt;&#10;                    &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                        &lt;lvc:CartesianChart.AxisX&gt;&#10;                            &lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:CartesianChart.AxisY&gt;&#10;                            &lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;/lvc:CartesianChart&gt;&#10;                &lt;/Grid&gt;&#10;&#10;            &lt;/TabItem&gt;&#10;        &lt;/TabControl&gt;&#10;&#10;    &lt;/Grid&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="481:5179" ph="&lt;&lt;TabControl&gt;&#10;            &lt;TabItem Header=&quot;Вкладка 1&quot;&gt;&#10;&#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;                    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;                    &lt;/StackPanel&gt;&#10;&#10;&#10;                    &lt;!-- --&gt;&#10;                    &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;                    &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;&#10;            &lt;/TabItem&gt;&#10;            &lt;TabItem Header=&quot;Вкладка 2&quot;&gt;&#10;&#10;&#10;                &lt;Grid&gt;&#10;                    &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                        &lt;lvc:CartesianChart.AxisX&gt;&#10;                            &lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:CartesianChart.AxisY&gt;&#10;                            &lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;/lvc:CartesianChart&gt;&#10;                &lt;/Grid&gt;&#10;&#10;            &lt;/TabItem&gt;&#10;        &lt;/TabControl&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="497:5166" ph="&lt;&lt;TabItem Header=&quot;Вкладка 1&quot;&gt;&#10;&#10;                &lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;                    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;                    &lt;/StackPanel&gt;&#10;&#10;&#10;                    &lt;!-- --&gt;&#10;                    &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;                    &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;                &lt;/DockPanel&gt;&#10;&#10;&#10;            &lt;/TabItem&gt; &lt;TabItem Header=&quot;Вкладка 2&quot;&gt;&#10;&#10;&#10;                &lt;Grid&gt;&#10;                    &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                        &lt;lvc:CartesianChart.AxisX&gt;&#10;                            &lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:CartesianChart.AxisY&gt;&#10;                            &lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;/lvc:CartesianChart&gt;&#10;                &lt;/Grid&gt;&#10;&#10;            &lt;/TabItem&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="522:4503" ph="&lt;&lt;DockPanel LastChildFill=&quot;True&quot;&gt;&#10;                    &lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;                    &lt;/StackPanel&gt;&#10;&#10;&#10;                    &lt;!-- --&gt;&#10;                    &lt;!-- &lt;Button DockPanel.Dock=&quot;Right&quot; Background=&quot;DarkGreen&quot; Content=&quot;Правая кнопка&quot; /&gt; --&gt;&#10;                    &lt;!-- &lt;Button Background=&quot;LightGreen&quot; Content=&quot;Центр&quot; /&gt; --&gt;&#10;                &lt;/DockPanel&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="568:4478" ph="&lt;&lt;StackPanel DockPanel.Dock=&quot;Top&quot; Height=&quot;300&quot;&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt;&#10;                        &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;&#10;                    &lt;/StackPanel&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="621:4228" ph="&lt;&lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;&#10;                        &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;&#10;                        &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt; &lt;DockPanel&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt;&#10;                            &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt;&#10;                            &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;&#10;                        &lt;/DockPanel&gt; &lt;Button Content=&quot;Сгенерировать штуки (текст потом поменяю)&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="692:1229" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество испытуемых&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                                Value=&quot;{Binding StudentAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding StudentAmount}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="836:1098" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="1254:1782" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Количество заданий&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                                Value=&quot;{Binding TaskAmount}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;1&quot;&#10;                                Maximum=&quot;50&quot;&#10;                                Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding TaskAmount}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="1395:1654" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="1807:2364" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальная сложность&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                                Value=&quot;{Binding MaxComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinComplexity}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxComplexity}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="1951:2233" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="2389:2926" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальная сложность&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                                Value=&quot;{Binding MinComplexity}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinComplexity}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="2534:2795" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="2951:3503" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Максимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                                Value=&quot;{Binding MaxLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;{Binding MinLevel}&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MaxLevel}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="3105:3377" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="3528:4063" ph="&lt;&lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;Минимальный уровень подготовки&quot; Width=&quot;170&quot; /&gt; &lt;Slider&#10;                                Value=&quot;{Binding MinLevel}&quot;&#10;                                DockPanel.Dock=&quot;Left&quot;&#10;                                Minimum=&quot;-4&quot;&#10;                                Maximum=&quot;4&quot;&#10;                                Width=&quot;200&quot; /&gt; &lt;Label DockPanel.Dock=&quot;Left&quot; Content=&quot;{Binding MinLevel}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="3681:3937" ph="&lt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="4516:5144" ph="&lt;&lt;Grid&gt;&#10;                    &lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                        &lt;lvc:CartesianChart.AxisX&gt;&#10;                            &lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:CartesianChart.AxisY&gt;&#10;                            &lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;/lvc:CartesianChart&gt;&#10;                &lt;/Grid&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="4563:5120" ph="&lt;&lt;lvc:CartesianChart Series=&quot;{Binding SeriesCollection}&quot; LegendLocation=&quot;Left&quot;&gt;&#10;                        &lt;lvc:CartesianChart.AxisX&gt;&#10;                            &lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisX&gt;&#10;                        &lt;lvc:CartesianChart.AxisY&gt;&#10;                            &lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisY&gt;&#10;                    &lt;/lvc:CartesianChart&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="4590:5096" ph="&lt;&lt;lvc:CartesianChart.AxisX&gt;&#10;                            &lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisX&gt; &lt;lvc:CartesianChart.AxisY&gt;&#10;                            &lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;&#10;                        &lt;/lvc:CartesianChart.AxisY&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="4693:4855" ph="&lt;&lt;lvc:Axis Title=&quot;Salesman&quot; Labels=&quot;{Binding Labels}&quot; /&gt;.../&gt;" />
+            <marker date="1638020234001" expanded="true" signature="4880:5054" ph="&lt;&lt;lvc:Axis Title=&quot;Sold Apps&quot; LabelFormatter=&quot;{Binding Formatter}&quot; /&gt;.../&gt;" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TestModel/Code/MainViewModel.cs">
+    <entry file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/FD824CFB-5500-4855-B9E6-D51B008C90E4/c0/0de61ef0/ThrowHelper.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" selection-start-line="11" selection-end-line="11" />
-          <folding>
-            <marker date="1635573816408" expanded="true" signature="6:298" ph="..." />
-            <marker date="1635573816408" expanded="true" signature="324:2957" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="402:2955" ph="{...}" />
-            <marker date="1635573816408" expanded="false" signature="417:2146" ph="Vars" />
-            <marker date="1635573816408" expanded="true" signature="694:891" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="755:881" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="922:1110" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="980:1100" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1147:1359" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1223:1349" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1396:1608" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1472:1598" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1650:1841" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1709:1831" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1877:2059" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="1933:2049" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="2380:2704" ph="{...}" />
-            <marker date="1635573816408" expanded="true" signature="2474:2633" ph="/* StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4); ... */" />
-            <marker date="1635573816408" expanded="true" signature="2842:2949" ph="{...}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="126">
-          <caret line="73" column="40" lean-forward="true" selection-start-line="73" selection-start-column="40" selection-end-line="73" selection-end-column="40" />
+        <state relative-caret-position="133">
+          <caret line="62" column="6" selection-start-line="62" selection-start-column="6" selection-end-line="62" selection-end-column="6" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/StudentCreator.cs">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="273">
-          <caret line="60" column="17" selection-start-line="60" selection-start-column="17" selection-end-line="60" selection-end-column="17" />
+        <state relative-caret-position="-9">
+          <caret line="47" column="61" selection-start-line="47" selection-start-column="36" selection-end-line="47" selection-end-column="61" />
           <folding>
             <marker date="1634314963876" expanded="false" signature="6:79" ph="..." />
             <marker date="1634314963876" expanded="true" signature="111:2664" ph="{...}" />
@@ -577,6 +667,62 @@
             <marker date="1634314963876" expanded="true" signature="1613:2399" ph="{...}" />
             <marker date="1634314963876" expanded="true" signature="1820:2314" ph="{...}" />
             <marker date="1634314963876" expanded="true" signature="2548:2656" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestModel/Code/MainViewModel.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-197">
+          <caret line="134" column="85" selection-start-line="134" selection-start-column="85" selection-end-line="134" selection-end-column="85" />
+          <folding>
+            <marker date="1638024631416" expanded="true" signature="6:332" ph="..." />
+            <marker date="1638024631416" expanded="true" signature="358:4443" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="436:4441" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="451:2816" ph="Vars" />
+            <marker date="1638024631416" expanded="false" signature="840:1037" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="901:1027" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="1068:1265" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="1139:1255" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="1296:1493" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="1367:1483" ph="{...}" />
+            <marker date="1638024631416" expanded="false" signature="1523:1711" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="1581:1701" ph="{...}" />
+            <marker date="1638024631416" expanded="false" signature="1747:1959" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="1823:1949" ph="{...}" />
+            <marker date="1638024631416" expanded="false" signature="1995:2207" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="2071:2197" ph="{...}" />
+            <marker date="1638024631416" expanded="false" signature="2248:2439" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="2307:2429" ph="{...}" />
+            <marker date="1638024631416" expanded="false" signature="2474:2656" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="2530:2646" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="3021:3138" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="3276:3383" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="3453:4334" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="3565:3724" ph="/* StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4); ... */" />
+            <marker date="1638024631416" expanded="true" signature="3907:4094" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="3958:4080" ph="{...}" />
+            <marker date="1638024631416" expanded="true" signature="4390:4435" ph="{...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TestModel/Code/Logic/Charts/TransactsToChartElementsConverter.cs">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="61" selection-start-line="11" selection-start-column="39" selection-end-line="11" selection-end-column="61" />
+          <folding>
+            <marker date="1638024631413" expanded="false" signature="6:148" ph="..." />
+            <marker date="1638024631413" expanded="true" signature="187:2468" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="247:2466" ph="{...}" />
+            <marker date="1638024631413" expanded="false" signature="355:1631" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="534:751" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="1010:1353" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="1080:1294" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="1189:1276" ph="{...}" />
+            <marker date="1638024631413" expanded="false" signature="1734:2460" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="1909:2085" ph="{...}" />
+            <marker date="1638024631413" expanded="true" signature="2230:2422" ph="{...}" />
           </folding>
         </state>
       </provider>
