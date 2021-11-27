@@ -3,11 +3,12 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using System.Windows;
-using System.Windows.Documents;
+using System.Windows.Controls;
 using TestModel.Annotations;
 using LiveCharts;
 using LiveCharts.Wpf;
 using TestModel.Code.Logic;
+using TestModel.Code.Logic.Charts;
 using TestModel.Code.Transacts;
 
 namespace TestModel.Code
@@ -16,10 +17,12 @@ namespace TestModel.Code
     {
         #region Vars
 
-        private int _studentAmount;
-        private int _taskAmount;
-        private double _minComplexity;
-        private double _maxComplexity;
+        private int _studentAmount = 10;
+        private int _taskAmount = 10;
+        private double _minComplexity = -4;
+        private double _maxComplexity = 4;
+        private double _minLevel = -4;
+        private double _maxLevel = 4;
         private List<Student> _studentList;
         private List<Task> _taskList;
 
@@ -31,6 +34,26 @@ namespace TestModel.Code
             {
                 _studentAmount = value;
                 OnPropertyChanged(nameof(StudentAmount));
+            }
+        }
+
+        public double MinLevel
+        {
+            get => Math.Round(_minLevel, 3);
+            set
+            {
+                _minLevel = value;
+                OnPropertyChanged(nameof(MinLevel));
+            }
+        }
+
+        public double MaxLevel
+        {
+            get => Math.Round(_maxLevel, 3);
+            set
+            {
+                _maxLevel = value;
+                OnPropertyChanged(nameof(MaxLevel));
             }
         }
 
@@ -86,26 +109,66 @@ namespace TestModel.Code
 
         public event PropertyChangedEventHandler PropertyChanged;
 
+        public RelayCommand GenerateTransactsCommand { get; set; }
+
         #endregion
 
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
-        public Func<int, string> YFormatter { get; set; }
+        public SeriesCollection StudentSeriesCollection { get; set; }
+        public SeriesCollection TaskSeriesCollection { get; set; }
+        public string[] StudentLabels { get; set; }
+        public string[] TaskLabels { get; set; }
+        public Func<int, string> Formatter { get; set; }
 
-        private int pockets = 10;
+        public const int POCKETS = 12;
 
         public MainViewModel()
         {
-            StudentList = StudentCreator.GenerateStudents(500, -4, 4);
-            //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
-            //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
-            TaskList = TaskCreator.GenerateTasks(10, -4, 4);
+            GenerateTransactsCommand = new RelayCommand(GenerateTransacts, CanGenerateTransacts);
         }
 
         [NotifyPropertyChangedInvocator]
         protected virtual void OnPropertyChanged([CallerMemberName] string propertyName = null)
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
+
+
+        public void GenerateTransacts(object param)
+        {
+            StudentList = StudentCreator.GenerateStudents(StudentAmount, MinLevel, MaxLevel);
+            //StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
+            //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
+            //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
+            TaskList = TaskCreator.GenerateTasks(TaskAmount, MinComplexity, MaxComplexity);
+
+
+            StudentSeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Values = TransactsToChartElementsConverter.GetStudentDistribution(StudentList, POCKETS)
+                }
+            };
+            StudentLabels = TransactsToChartElementsConverter.GetLabelsForStudentDistribution(StudentList, POCKETS);
+            Formatter = value => value.ToString("N");
+
+            TaskSeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Values = TransactsToChartElementsConverter.GetTaskDistribution(TaskList, POCKETS)
+                }
+            };
+            TaskLabels = TransactsToChartElementsConverter.GetLabelsForTaskDistribution(TaskList, POCKETS);
+            Formatter = value => value.ToString("N");
+
+            OnPropertyChanged(nameof(StudentSeriesCollection));
+            OnPropertyChanged(nameof(TaskSeriesCollection));
+        }
+
+        public bool CanGenerateTransacts(object param)
+        {
+            return true;
         }
     }
 }
