@@ -25,8 +25,8 @@ namespace TestModel.Code
         private double _maxLevel = 4;
         private List<Student> _studentList;
         private List<Task> _taskList;
-        
-        
+
+
         public int StudentAmount
         {
             get => _studentAmount;
@@ -36,6 +36,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentAmount));
             }
         }
+
         public double MinLevel
         {
             get => Math.Round(_minLevel, 3);
@@ -45,6 +46,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MinLevel));
             }
         }
+
         public double MaxLevel
         {
             get => Math.Round(_maxLevel, 3);
@@ -54,6 +56,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MaxLevel));
             }
         }
+
         public int TaskAmount
         {
             get => _taskAmount;
@@ -63,6 +66,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskAmount));
             }
         }
+
         public double MinComplexity
         {
             get => Math.Round(_minComplexity, 3);
@@ -72,6 +76,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MinComplexity));
             }
         }
+
         public double MaxComplexity
         {
             get => Math.Round(_maxComplexity, 3);
@@ -81,6 +86,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MaxComplexity));
             }
         }
+
         public List<Student> StudentList
         {
             get => _studentList;
@@ -90,6 +96,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentList));
             }
         }
+
         public List<Task> TaskList
         {
             get => _taskList;
@@ -99,18 +106,24 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskList));
             }
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
-        
-        public RelayCommand GenerateStudentsCommand { get; set; }
+
+        public RelayCommand GenerateTransactsCommand { get; set; }
+
         #endregion
-        
-        public SeriesCollection SeriesCollection { get; set; }
-        public string[] Labels { get; set; }
+
+        public SeriesCollection StudentSeriesCollection { get; set; }
+        public SeriesCollection TaskSeriesCollection { get; set; }
+        public string[] StudentLabels { get; set; }
+        public string[] TaskLabels { get; set; }
         public Func<int, string> Formatter { get; set; }
+
+        public const int POCKETS = 12;
+
         public MainViewModel()
         {
-           GenerateStudentsCommand = new RelayCommand(GenerateTransacts, CanGenerateTransacts);
-
+            GenerateTransactsCommand = new RelayCommand(GenerateTransacts, CanGenerateTransacts);
         }
 
         [NotifyPropertyChangedInvocator]
@@ -118,27 +131,39 @@ namespace TestModel.Code
         {
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
-        
-        
+
+
         public void GenerateTransacts(object param)
         {
-            StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
+            StudentList = StudentCreator.GenerateStudents(StudentAmount, MinLevel, MaxLevel);
+            //StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
             //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
             //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
             TaskList = TaskCreator.GenerateTasks(TaskAmount, MinComplexity, MaxComplexity);
-            
-            
-            SeriesCollection = new SeriesCollection
+
+
+            StudentSeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
                 {
-                    Values = TransactsToChartElementsConverter.GetStudentDistribution(StudentList, 10)
+                    Values = TransactsToChartElementsConverter.GetStudentDistribution(StudentList, POCKETS)
                 }
             };
-            Labels = TransactsToChartElementsConverter.GetLabelsForStudentDistribution(StudentList, 10);
+            StudentLabels = TransactsToChartElementsConverter.GetLabelsForStudentDistribution(StudentList, POCKETS);
             Formatter = value => value.ToString("N");
-            
-            OnPropertyChanged(nameof(SeriesCollection));
+
+            TaskSeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Values = TransactsToChartElementsConverter.GetTaskDistribution(TaskList, POCKETS)
+                }
+            };
+            TaskLabels = TransactsToChartElementsConverter.GetLabelsForTaskDistribution(TaskList, POCKETS);
+            Formatter = value => value.ToString("N");
+
+            OnPropertyChanged(nameof(StudentSeriesCollection));
+            OnPropertyChanged(nameof(TaskSeriesCollection));
         }
 
         public bool CanGenerateTransacts(object param)

@@ -9,7 +9,7 @@
     <Grid>
 
         <TabControl>
-            <TabItem Header="Вкладка 1">
+            <TabItem Header="Задание параметров">
 
                 <DockPanel LastChildFill="True">
                     <StackPanel DockPanel.Dock="Top" Height="300">
@@ -73,7 +73,7 @@
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinLevel}" />
                         </DockPanel>
-                        <Button Content="Сгенерировать штуки (текст потом поменяю)" Command="{Binding GenerateStudentsCommand}" />
+                        <Button Content="Сгенерировать штуки (текст потом поменяю)" Command="{Binding GenerateTransactsCommand}" />
                     </StackPanel>
 
 
@@ -84,20 +84,29 @@
 
 
             </TabItem>
-            <TabItem Header="Вкладка 2">
-
-
+            <TabItem Header="Распределение испытуемых">
                 <Grid>
-                    <lvc:CartesianChart Series="{Binding SeriesCollection}" LegendLocation="Left">
+                    <lvc:CartesianChart Series="{Binding StudentSeriesCollection}" LegendLocation="Left">
                         <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Title="Salesman" Labels="{Binding Labels}" />
+                            <lvc:Axis Title="Salesman" Labels="{Binding StudentLabels}" />
                         </lvc:CartesianChart.AxisX>
                         <lvc:CartesianChart.AxisY>
                             <lvc:Axis Title="Sold Apps" LabelFormatter="{Binding Formatter}" />
                         </lvc:CartesianChart.AxisY>
                     </lvc:CartesianChart>
                 </Grid>
-
+            </TabItem>
+            <TabItem Header="Распределение заданий">
+                <Grid>
+                    <lvc:CartesianChart Series="{Binding TaskSeriesCollection}" LegendLocation="Left">
+                        <lvc:CartesianChart.AxisX>
+                            <lvc:Axis Title="Salesman" Labels="{Binding TaskLabels}" />
+                        </lvc:CartesianChart.AxisX>
+                        <lvc:CartesianChart.AxisY>
+                            <lvc:Axis Title="Sold Apps" LabelFormatter="{Binding Formatter}" />
+                        </lvc:CartesianChart.AxisY>
+                    </lvc:CartesianChart>
+                </Grid>
             </TabItem>
         </TabControl>
 
