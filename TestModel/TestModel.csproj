@@ -72,6 +72,7 @@
         <Compile Include="Code\Logic\Charts\TransactsToChartElementsConverter.cs" />
         <Compile Include="Code\Logic\StudentCreator.cs" />
         <Compile Include="Code\Logic\TaskCreator.cs" />
+        <Compile Include="Code\Logic\TestAbstraction.cs" />
         <Compile Include="Code\MainViewModel.cs" />
         <Compile Include="Code\RelayCommand.cs" />
         <Compile Include="Code\Result.cs" />
