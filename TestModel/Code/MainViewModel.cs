@@ -7,6 +7,7 @@ using System.Windows.Controls;
 using TestModel.Annotations;
 using LiveCharts;
 using LiveCharts.Wpf;
+using TestModel.Code.Additions;
 using TestModel.Code.Logic;
 using TestModel.Code.Logic.Charts;
 using TestModel.Code.Transacts;
@@ -115,6 +116,7 @@ namespace TestModel.Code
 
         public SeriesCollection StudentSeriesCollection { get; set; }
         public SeriesCollection TaskSeriesCollection { get; set; }
+        public SeriesCollection ResultSeriesCollection { get; set; }
         public string[] StudentLabels { get; set; }
         public string[] TaskLabels { get; set; }
         public Func<int, string> Formatter { get; set; }
@@ -162,6 +164,36 @@ namespace TestModel.Code
             TaskLabels = TransactsToChartElementsConverter.GetLabelsForTaskDistribution(TaskList, POCKETS);
             Formatter = value => value.ToString("N");
 
+            Dictionary<Double, double> result = new StandardTesterModeler().RunTest(StudentList, TaskList).GetResultDictionary();
+            
+            List<Double> studentLevels = new List<double>();
+            List<Double> resultsOfStudents = new List<double>();
+            List<Double> plug = new List<double>();
+
+            foreach (var res in result)
+            {
+                studentLevels.Add(res.Key + 4);
+                resultsOfStudents.Add(res.Value + 4);
+                plug.Add(0);
+            }
+            
+            ResultSeriesCollection = new SeriesCollection
+            {
+                new ColumnSeries
+                {
+                    Values = new ChartValues<Double>(studentLevels)
+                },
+                new ColumnSeries
+                {
+                    Values = new ChartValues<Double>(resultsOfStudents)
+                },
+                new ColumnSeries
+                {
+                    Values = new ChartValues<Double>(plug)
+                }
+            };
+
+            OnPropertyChanged(nameof(ResultSeriesCollection));
             OnPropertyChanged(nameof(StudentSeriesCollection));
             OnPropertyChanged(nameof(TaskSeriesCollection));
         }
