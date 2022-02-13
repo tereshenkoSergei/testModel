@@ -24,6 +24,7 @@
           <e p="MainViewModel.cs" t="Include" />
           <e p="RelayCommand.cs" t="Include" />
           <e p="Result.cs" t="Include" />
+          <e p="SimpleProtocol.cs" t="Include" />
           <e p="Transacts" t="Include">
             <e p="Student.cs" t="Include" />
             <e p="Task.cs" t="Include" />
