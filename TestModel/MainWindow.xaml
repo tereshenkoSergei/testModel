@@ -11,27 +11,38 @@
         <TabControl>
             <TabItem Header="Задание параметров">
 
-                <DockPanel LastChildFill="True">
+                <DockPanel LastChildFill="False">
                     <StackPanel DockPanel.Dock="Top" Height="300">
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="170" />
-                            <Slider
-                                Value="{Binding StudentAmount}"
+                            <TextBox 
                                 DockPanel.Dock="Left"
-                                Minimum="1"
-                                Maximum="200"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding StudentAmount}" />
+                                Text="{Binding StudentAmount}" 
+                                PreviewTextInput="NumberValidationTextBox"
+                                Width="50"
+                            />
+                            <DockPanel DockPanel.Dock="Left">
+                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left" Command="{Binding IncrementStudentAmountCommand}"></Button>
+                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right" Command="{Binding DecrementStudentAmountCommand}"></Button>
+                            </DockPanel>
+                            <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
+                        
+                        
+                        
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Количество заданий" Width="170" />
-                            <Slider
-                                Value="{Binding TaskAmount}"
+                            <TextBox 
                                 DockPanel.Dock="Left"
-                                Minimum="1"
-                                Maximum="200"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding TaskAmount}" />
+                                Text="{Binding TaskAmount}" 
+                                PreviewTextInput="NumberValidationTextBox"
+                                Width="50"
+                            />
+                            <DockPanel DockPanel.Dock="Left">
+                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left" Command="{Binding IncrementTaskAmountCommand}"></Button>
+                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right" Command="{Binding DecrementTaskAmountCommand}"></Button>
+                            </DockPanel>
+                            <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="170" />
@@ -73,7 +84,8 @@
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinLevel}" />
                         </DockPanel>
-                        <Button Content="Сгенерировать транзакты и смымитировать тестирование" Command="{Binding GenerateTransactsCommand}" />
+                        <Button Content="Сгенерировать транзакты и смымитировать тестирование"
+                                Command="{Binding GenerateTransactsCommand}" />
                     </StackPanel>
 
 
@@ -108,8 +120,8 @@
                     </lvc:CartesianChart>
                 </Grid>
             </TabItem>
-            
-            
+
+
             <TabItem Header="Результаты">
                 <Grid>
                     <lvc:CartesianChart Series="{Binding ResultSeriesCollection}" LegendLocation="Left">

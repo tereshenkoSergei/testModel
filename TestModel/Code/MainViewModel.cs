@@ -2,8 +2,10 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using System.Text.RegularExpressions;
 using System.Windows;
 using System.Windows.Controls;
+using System.Windows.Input;
 using TestModel.Annotations;
 using LiveCharts;
 using LiveCharts.Wpf;
@@ -26,8 +28,6 @@ namespace TestModel.Code
         private double _maxLevel = 4;
         private List<Student> _studentList;
         private List<Task> _taskList;
-
-
         public int StudentAmount
         {
             get => _studentAmount;
@@ -37,7 +37,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentAmount));
             }
         }
-
         public double MinLevel
         {
             get => Math.Round(_minLevel, 3);
@@ -47,7 +46,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MinLevel));
             }
         }
-
         public double MaxLevel
         {
             get => Math.Round(_maxLevel, 3);
@@ -57,7 +55,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MaxLevel));
             }
         }
-
         public int TaskAmount
         {
             get => _taskAmount;
@@ -67,7 +64,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskAmount));
             }
         }
-
         public double MinComplexity
         {
             get => Math.Round(_minComplexity, 3);
@@ -77,7 +73,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MinComplexity));
             }
         }
-
         public double MaxComplexity
         {
             get => Math.Round(_maxComplexity, 3);
@@ -87,7 +82,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MaxComplexity));
             }
         }
-
         public List<Student> StudentList
         {
             get => _studentList;
@@ -97,7 +91,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentList));
             }
         }
-
         public List<Task> TaskList
         {
             get => _taskList;
@@ -107,11 +100,12 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskList));
             }
         }
-
         public event PropertyChangedEventHandler PropertyChanged;
-
         public RelayCommand GenerateTransactsCommand { get; set; }
-
+        public RelayCommand IncrementStudentAmountCommand { get; set; }
+        public RelayCommand DecrementStudentAmountCommand { get; set; }
+        public RelayCommand IncrementTaskAmountCommand { get; set; }
+        public RelayCommand DecrementTaskAmountCommand { get; set; }
         #endregion
 
         public SeriesCollection StudentSeriesCollection { get; set; }
@@ -126,6 +120,10 @@ namespace TestModel.Code
         public MainViewModel()
         {
             GenerateTransactsCommand = new RelayCommand(GenerateTransacts, CanGenerateTransacts);
+            IncrementStudentAmountCommand = new RelayCommand(IncrementStudentAmount, CanIncrementStudentAmount);
+            DecrementStudentAmountCommand = new RelayCommand(DecrementStudentAmount, CanDecrementStudentAmount);
+            IncrementTaskAmountCommand = new RelayCommand(IncrementTaskAmount, CanIncrementTaskAmount);
+            DecrementTaskAmountCommand = new RelayCommand(DecrementTaskAmount, CanDecrementTaskAmount);
         }
 
         [NotifyPropertyChangedInvocator]
@@ -134,6 +132,51 @@ namespace TestModel.Code
             PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
         }
 
+        public void IncrementStudentAmount(object param)
+        {
+            StudentAmount++;
+            OnPropertyChanged(nameof(StudentAmount));
+        }
+
+        public bool CanIncrementStudentAmount(object param)
+        {
+            return true;
+        }
+
+        public void DecrementStudentAmount(object param)
+        {
+            StudentAmount--;
+            OnPropertyChanged(nameof(StudentAmount));
+        }
+
+        public bool CanDecrementStudentAmount(object param)
+        {
+            return StudentAmount > 0;
+        }
+        
+        public void IncrementTaskAmount(object param)
+        {
+            TaskAmount++;
+            OnPropertyChanged(nameof(TaskAmount));
+        }
+
+        public bool CanIncrementTaskAmount(object param)
+        {
+            return true;
+        }
+
+        public void DecrementTaskAmount(object param)
+        {
+            TaskAmount--;
+            OnPropertyChanged(nameof(TaskAmount));
+        }
+
+        public bool CanDecrementTaskAmount(object param)
+        {
+            return TaskAmount > 0;
+        }
+        
+        
 
         public void GenerateTransacts(object param)
         {
@@ -202,5 +245,6 @@ namespace TestModel.Code
         {
             return true;
         }
+        
     }
 }

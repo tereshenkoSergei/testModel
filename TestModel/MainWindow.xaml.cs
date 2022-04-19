@@ -1,4 +1,6 @@
-﻿using TestModel.Code;
+﻿using System.Text.RegularExpressions;
+using System.Windows.Input;
+using TestModel.Code;
 
 namespace TestModel
 {
@@ -12,5 +14,11 @@ namespace TestModel
             InitializeComponent();
             DataContext = new MainViewModel();
         }
+        private void NumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            e.Handled = regex.IsMatch(e.Text);
+        }
     }
+    
 }
