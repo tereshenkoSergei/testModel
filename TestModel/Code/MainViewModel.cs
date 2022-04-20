@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
 using System.Windows;
@@ -29,8 +31,12 @@ namespace TestModel.Code
         private double _maxLevel = 4;
         private double _minGuessingProbability = 0;
         private double _maxGuessingProbability = 0;
-        private List<Student> _studentList;
-        private List<Task> _taskList;
+        private int _selectedStudentId = 0;
+        private int _selectedTaskId = 0;
+        private ObservableCollection<Student> _studentList;
+        private ObservableCollection<Task> _taskList;
+        private Student SelectedStudent { get; set; }
+        private Task SelectedTask { get; set; }
 
         public int StudentAmount
         {
@@ -93,7 +99,7 @@ namespace TestModel.Code
                 _minGuessingProbability = value;
                 OnPropertyChanged(nameof(MinGuessingProbability));
                 OnPropertyChanged(nameof(MaxGuessingProbability));
-            } 
+            }
         }
 
         public double MaxGuessingProbability
@@ -104,7 +110,7 @@ namespace TestModel.Code
                 _maxGuessingProbability = value;
                 OnPropertyChanged(nameof(MaxGuessingProbability));
                 OnPropertyChanged(nameof(MinGuessingProbability));
-            } 
+            }
         }
 
         public double MaxComplexity
@@ -118,7 +124,7 @@ namespace TestModel.Code
             }
         }
 
-        public List<Student> StudentList
+        public ObservableCollection<Student> StudentList
         {
             get => _studentList;
             set
@@ -128,7 +134,73 @@ namespace TestModel.Code
             }
         }
 
-        public List<Task> TaskList
+        public int SelectedStudentId
+        {
+            get
+            {
+                if (StudentList.Count <= 0)
+                {
+                    SelectedStudent = new Student(0);
+                }
+                else
+                {
+                    if (_selectedStudentId < 0) _selectedStudentId = 0;
+
+                    SelectedStudent = StudentList[_selectedStudentId];
+                }
+
+                return _selectedStudentId;
+            }
+            set
+            {
+                _selectedStudentId = value;
+
+                if (StudentList.Count <= 0) return;
+                if (_selectedStudentId < 0)
+                {
+                    _selectedStudentId = 0;
+                    SelectedStudent = StudentList[_selectedStudentId];
+                }
+
+                OnPropertyChanged(nameof(StudentList));
+                OnPropertyChanged(nameof(SelectedStudent));
+            }
+        }
+
+        public int SelectedTaskId
+        {
+            get
+            {
+                if (TaskList.Count <= 0)
+                {
+                    SelectedTask = new Task(0, 0);
+                }
+                else
+                {
+                    if (_selectedTaskId < 0) _selectedTaskId = 0;
+
+                    SelectedTask = TaskList[_selectedTaskId];
+                }
+
+                return _selectedTaskId;
+            }
+            set
+            {
+                _selectedTaskId = value;
+
+                if (TaskList.Count <= 0) return;
+                if (_selectedTaskId < 0)
+                {
+                    _selectedTaskId = 0;
+                    SelectedTask = TaskList[_selectedTaskId];
+                }
+
+                OnPropertyChanged(nameof(TaskList));
+                OnPropertyChanged(nameof(SelectedTask));
+            }
+        }
+
+        public ObservableCollection<Task> TaskList
         {
             get => _taskList;
             set
@@ -144,9 +216,7 @@ namespace TestModel.Code
         public RelayCommand DecrementStudentAmountCommand { get; set; }
         public RelayCommand IncrementTaskAmountCommand { get; set; }
         public RelayCommand DecrementTaskAmountCommand { get; set; }
-
-        #endregion
-
+        public RelayCommand RunTestsCommand { get; set; }
         public SeriesCollection StudentSeriesCollection { get; set; }
         public SeriesCollection TaskSeriesCollection { get; set; }
         public SeriesCollection ResultSeriesCollection { get; set; }
@@ -156,9 +226,8 @@ namespace TestModel.Code
 
         public CartesianChart MainCartesianChart { get; set; }
         public const int POCKETS = 12;
-        
-        
-        
+
+        #endregion
 
         public MainViewModel()
         {
@@ -167,14 +236,15 @@ namespace TestModel.Code
             DecrementStudentAmountCommand = new RelayCommand(DecrementStudentAmount, CanDecrementStudentAmount);
             IncrementTaskAmountCommand = new RelayCommand(IncrementTaskAmount, CanIncrementTaskAmount);
             DecrementTaskAmountCommand = new RelayCommand(DecrementTaskAmount, CanDecrementTaskAmount);
-            
+            RunTestsCommand = new RelayCommand(RunTests, CanRunTests);
+
             MainCartesianChart = new CartesianChart();
             MainCartesianChart.Series = new SeriesCollection
             {
                 new LineSeries
                 {
                     Title = "Series 1",
-                    Values = new ChartValues<double> { 1, 1, 2, 3 ,5 }
+                    Values = new ChartValues<double> {0}
                 }
             };
         }
@@ -229,37 +299,53 @@ namespace TestModel.Code
             return TaskAmount > 0;
         }
 
-
         public void GenerateTransacts(object param)
         {
-            StudentList = StudentCreator.GenerateStudents(StudentAmount, MinLevel, MaxLevel);
+            StudentList =
+                new ObservableCollection<Student>(StudentCreator.GenerateStudents(StudentAmount, MinLevel, MaxLevel));
             //StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
             //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
             //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
-            TaskList = TaskCreator.GenerateTasks(TaskAmount, MinComplexity, MaxComplexity, MinGuessingProbability/100, MaxGuessingProbability/100);
+            TaskList = new ObservableCollection<Task>(
+                TaskCreator.GenerateTasks(TaskAmount,
+                    MinComplexity,
+                    MaxComplexity,
+                    MinGuessingProbability / 100,
+                    MaxGuessingProbability / 100));
 
 
             StudentSeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
                 {
-                    Values = TransactsToChartElementsConverter.GetStudentDistribution(StudentList, POCKETS)
+                    Values = TransactsToChartElementsConverter.GetStudentDistribution(StudentList.ToList(), POCKETS)
                 }
             };
-            StudentLabels = TransactsToChartElementsConverter.GetLabelsForStudentDistribution(StudentList, POCKETS);
+            StudentLabels =
+                TransactsToChartElementsConverter.GetLabelsForStudentDistribution(StudentList.ToList(), POCKETS);
             Formatter = value => value.ToString("N");
 
             TaskSeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
                 {
-                    Values = TransactsToChartElementsConverter.GetTaskDistribution(TaskList, POCKETS)
+                    Values = TransactsToChartElementsConverter.GetTaskDistribution(TaskList.ToList(), POCKETS)
                 }
             };
-            TaskLabels = TransactsToChartElementsConverter.GetLabelsForTaskDistribution(TaskList, POCKETS);
+            TaskLabels = TransactsToChartElementsConverter.GetLabelsForTaskDistribution(TaskList.ToList(), POCKETS);
             Formatter = value => value.ToString("N");
 
-            Dictionary<Double, double> result = new StandardTesterModeler().RunTest(StudentList, TaskList)
+
+            OnPropertyChanged(nameof(ResultSeriesCollection));
+            OnPropertyChanged(nameof(StudentSeriesCollection));
+            OnPropertyChanged(nameof(TaskSeriesCollection));
+            OnPropertyChanged(nameof(MainCartesianChart));
+        }
+
+        public void RunTests(object param)
+        {
+            Dictionary<Double, double> result = new StandardTesterModeler()
+                .RunTest(StudentList.ToList(), TaskList.ToList())
                 .GetResultDictionary();
 
             List<Double> studentLevels = new List<double>();
@@ -272,8 +358,6 @@ namespace TestModel.Code
                 resultsOfStudents.Add(res.Value);
                 plug.Add(0);
             }
-            
-
 
 
             ResultSeriesCollection = new SeriesCollection
@@ -292,7 +376,7 @@ namespace TestModel.Code
                 }
             };
 
-            
+
             MainCartesianChart.Series = new SeriesCollection
             {
                 new LineSeries
@@ -306,11 +390,11 @@ namespace TestModel.Code
                     Values = new ChartValues<double>(studentLevels)
                 }
             };
-            
-            OnPropertyChanged(nameof(ResultSeriesCollection));
-            OnPropertyChanged(nameof(StudentSeriesCollection));
-            OnPropertyChanged(nameof(TaskSeriesCollection));
-            OnPropertyChanged(nameof(MainCartesianChart));
+        }
+
+        public bool CanRunTests(object param)
+        {
+            return (StudentList?.Count > 0 && TaskList?.Count > 0);
         }
 
         public bool CanGenerateTransacts(object param)

@@ -7,44 +7,39 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="1000" Width="1000">
     <Grid>
-      
-        
-        <TabControl>
-            
 
-            
-            
+
+        <TabControl>
             <TabItem Header="Задание параметров">
                 <DockPanel LastChildFill="False">
                     <StackPanel Background="Gold" DockPanel.Dock="Top" Height="300">
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="250" />
-                            <TextBox 
+                            <TextBox
                                 DockPanel.Dock="Left"
-                                Text="{Binding StudentAmount}" 
+                                Text="{Binding StudentAmount}"
                                 PreviewTextInput="NumberValidationTextBox"
-                                Width="50"
-                            />
+                                Width="50" />
                             <DockPanel DockPanel.Dock="Left">
-                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left" Command="{Binding IncrementStudentAmountCommand}"></Button>
-                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right" Command="{Binding DecrementStudentAmountCommand}"></Button>
+                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left"
+                                        Command="{Binding IncrementStudentAmountCommand}" />
+                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right"
+                                        Command="{Binding DecrementStudentAmountCommand}" />
                             </DockPanel>
                             <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
-                        
-                        
-                        
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Количество заданий" Width="250" />
-                            <TextBox 
+                            <TextBox
                                 DockPanel.Dock="Left"
-                                Text="{Binding TaskAmount}" 
+                                Text="{Binding TaskAmount}"
                                 PreviewTextInput="NumberValidationTextBox"
-                                Width="50"
-                            />
+                                Width="50" />
                             <DockPanel DockPanel.Dock="Left">
-                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left" Command="{Binding IncrementTaskAmountCommand}"></Button>
-                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right" Command="{Binding DecrementTaskAmountCommand}"></Button>
+                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left"
+                                        Command="{Binding IncrementTaskAmountCommand}" />
+                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right"
+                                        Command="{Binding DecrementTaskAmountCommand}" />
                             </DockPanel>
                             <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
@@ -88,7 +83,6 @@
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinLevel}" />
                         </DockPanel>
-                        
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Максимальная вероятность угадывания" Width="250" />
                             <Slider
@@ -98,6 +92,7 @@
                                 Maximum="100"
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MaxGuessingProbability}" />
+                            <Label DockPanel.Dock="Left" Content="%" />
                         </DockPanel>
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Минимальная вероятность угадывания" Width="250" />
@@ -108,24 +103,71 @@
                                 Maximum="100"
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinGuessingProbability}" />
+                            <Label DockPanel.Dock="Left" Content="%" />
                         </DockPanel>
-                        
                         <DockPanel>
-                        <Button DockPanel.Dock="left" Content="Запустить имитацию тестирования"
-                                Command="{Binding GenerateTransactsCommand}"
-                                Width="300"
-                                Height="50"/>
-                        
-                        <Label DockPanel.Dock="Left" Content="" Width="170" />
-                        <Label DockPanel.Dock="left" Width="170"></Label>
+                            <Button DockPanel.Dock="left" Content="Сгенерировать транзакты"
+                                    Command="{Binding GenerateTransactsCommand}"
+                                    Width="300"
+                                    Height="50" />
+                            <Button DockPanel.Dock="left" Content="Добавить транзакты"
+                                    Command="{Binding GenerateTransactsCommand}"
+                                    Width="300"
+                                    Height="50" />
+                            <Button DockPanel.Dock="left" Content="Запустить имитацию тестирования"
+                                    Command="{Binding RunTestsCommand}"
+                                    Width="300"
+                                    Height="50" />
+
+                            <Label DockPanel.Dock="Left" Content="" Width="170" />
+                            <Label DockPanel.Dock="left" Width="170" />
 
                         </DockPanel>
-
+                        
                     </StackPanel>
+     
+                        <DockPanel Dock="Top" >
 
-    
+                            <DataGrid DockPanel.Dock="left"
+                                      Height="400"
+                                      ScrollViewer.CanContentScroll="True"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectedIndex="{Binding SelectedStudentId}"
+                                      ItemsSource="{Binding StudentList}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                        Binding="{Binding Id}" />
+                                    <DataGridTextColumn Header="Уровень подготовки" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding Level}" />
+                                    <!--Selected msi's values list-->
+                                </DataGrid.Columns>
+                            </DataGrid>
 
 
+                            <DataGrid DockPanel.Dock="right"
+                                      Height="400"
+                                      ScrollViewer.CanContentScroll="True"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectedIndex="{Binding SelectedTaskId}"
+                                      ItemsSource="{Binding TaskList}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                        Binding="{Binding Id}" />
+                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding Complexity}" />
+                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding GuessingProbability}" />
+                                    <DataGridTextColumn Header="Баллы" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding Weight}" />
+                                    <!--Selected msi's values list-->
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+
+                        </DockPanel>
+                   
 
                 </DockPanel>
             </TabItem>
@@ -155,13 +197,13 @@
             </TabItem>
 
             <TabItem Header="Результаты">
-    
+
                 <lvc:CartesianChart x:Name="EMT_Chart1"
                                     Series="{Binding MainCartesianChart.Series}"
                                     LegendLocation="Bottom"
-                                    Zoom="XY" Pan="XY"/>
-    
-            </TabItem>    
+                                    Zoom="XY" Pan="XY" />
+
+            </TabItem>
 
         </TabControl>
 
