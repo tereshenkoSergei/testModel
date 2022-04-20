@@ -8,6 +8,7 @@ using System.Windows.Controls;
 using System.Windows.Input;
 using TestModel.Annotations;
 using LiveCharts;
+using LiveCharts.Charts;
 using LiveCharts.Wpf;
 using TestModel.Code.Additions;
 using TestModel.Code.Logic;
@@ -28,6 +29,7 @@ namespace TestModel.Code
         private double _maxLevel = 4;
         private List<Student> _studentList;
         private List<Task> _taskList;
+
         public int StudentAmount
         {
             get => _studentAmount;
@@ -37,6 +39,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentAmount));
             }
         }
+
         public double MinLevel
         {
             get => Math.Round(_minLevel, 3);
@@ -46,6 +49,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MinLevel));
             }
         }
+
         public double MaxLevel
         {
             get => Math.Round(_maxLevel, 3);
@@ -55,6 +59,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MaxLevel));
             }
         }
+
         public int TaskAmount
         {
             get => _taskAmount;
@@ -64,6 +69,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskAmount));
             }
         }
+
         public double MinComplexity
         {
             get => Math.Round(_minComplexity, 3);
@@ -73,6 +79,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MinComplexity));
             }
         }
+
         public double MaxComplexity
         {
             get => Math.Round(_maxComplexity, 3);
@@ -82,6 +89,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(MaxComplexity));
             }
         }
+
         public List<Student> StudentList
         {
             get => _studentList;
@@ -91,6 +99,7 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentList));
             }
         }
+
         public List<Task> TaskList
         {
             get => _taskList;
@@ -100,12 +109,14 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskList));
             }
         }
+
         public event PropertyChangedEventHandler PropertyChanged;
         public RelayCommand GenerateTransactsCommand { get; set; }
         public RelayCommand IncrementStudentAmountCommand { get; set; }
         public RelayCommand DecrementStudentAmountCommand { get; set; }
         public RelayCommand IncrementTaskAmountCommand { get; set; }
         public RelayCommand DecrementTaskAmountCommand { get; set; }
+
         #endregion
 
         public SeriesCollection StudentSeriesCollection { get; set; }
@@ -115,7 +126,11 @@ namespace TestModel.Code
         public string[] TaskLabels { get; set; }
         public Func<int, string> Formatter { get; set; }
 
+        public CartesianChart MainCartesianChart { get; set; }
         public const int POCKETS = 12;
+        
+        
+        
 
         public MainViewModel()
         {
@@ -124,6 +139,16 @@ namespace TestModel.Code
             DecrementStudentAmountCommand = new RelayCommand(DecrementStudentAmount, CanDecrementStudentAmount);
             IncrementTaskAmountCommand = new RelayCommand(IncrementTaskAmount, CanIncrementTaskAmount);
             DecrementTaskAmountCommand = new RelayCommand(DecrementTaskAmount, CanDecrementTaskAmount);
+            
+            MainCartesianChart = new CartesianChart();
+            MainCartesianChart.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Series 1",
+                    Values = new ChartValues<double> { 1, 1, 2, 3 ,5 }
+                }
+            };
         }
 
         [NotifyPropertyChangedInvocator]
@@ -153,7 +178,7 @@ namespace TestModel.Code
         {
             return StudentAmount > 0;
         }
-        
+
         public void IncrementTaskAmount(object param)
         {
             TaskAmount++;
@@ -175,8 +200,7 @@ namespace TestModel.Code
         {
             return TaskAmount > 0;
         }
-        
-        
+
 
         public void GenerateTransacts(object param)
         {
@@ -207,19 +231,23 @@ namespace TestModel.Code
             TaskLabels = TransactsToChartElementsConverter.GetLabelsForTaskDistribution(TaskList, POCKETS);
             Formatter = value => value.ToString("N");
 
-            Dictionary<Double, double> result = new StandardTesterModeler().RunTest(StudentList, TaskList).GetResultDictionary();
-            
+            Dictionary<Double, double> result = new StandardTesterModeler().RunTest(StudentList, TaskList)
+                .GetResultDictionary();
+
             List<Double> studentLevels = new List<double>();
             List<Double> resultsOfStudents = new List<double>();
             List<Double> plug = new List<double>();
 
             foreach (var res in result)
             {
-                studentLevels.Add(res.Key + 4);
-                resultsOfStudents.Add(res.Value + 4);
+                studentLevels.Add(res.Key);
+                resultsOfStudents.Add(res.Value);
                 plug.Add(0);
             }
             
+
+
+
             ResultSeriesCollection = new SeriesCollection
             {
                 new ColumnSeries
@@ -236,15 +264,30 @@ namespace TestModel.Code
                 }
             };
 
+            
+            MainCartesianChart.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "Results",
+                    Values = new ChartValues<double>(resultsOfStudents)
+                },
+                new LineSeries
+                {
+                    Title = "Levels",
+                    Values = new ChartValues<double>(studentLevels)
+                }
+            };
+            
             OnPropertyChanged(nameof(ResultSeriesCollection));
             OnPropertyChanged(nameof(StudentSeriesCollection));
             OnPropertyChanged(nameof(TaskSeriesCollection));
+            OnPropertyChanged(nameof(MainCartesianChart));
         }
 
         public bool CanGenerateTransacts(object param)
         {
             return true;
         }
-        
     }
 }
