@@ -18,7 +18,7 @@
                 <DockPanel LastChildFill="False">
                     <StackPanel Background="Gold" DockPanel.Dock="Top" Height="300">
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="250" />
                             <TextBox 
                                 DockPanel.Dock="Left"
                                 Text="{Binding StudentAmount}" 
@@ -35,7 +35,7 @@
                         
                         
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Количество заданий" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Количество заданий" Width="250" />
                             <TextBox 
                                 DockPanel.Dock="Left"
                                 Text="{Binding TaskAmount}" 
@@ -49,7 +49,7 @@
                             <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="250" />
                             <Slider
                                 Value="{Binding MaxComplexity}"
                                 DockPanel.Dock="Left"
@@ -59,7 +59,7 @@
                             <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="250" />
                             <Slider
                                 Value="{Binding MinComplexity}"
                                 DockPanel.Dock="Left"
@@ -69,7 +69,7 @@
                             <Label DockPanel.Dock="Left" Content="{Binding MinComplexity}" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="250" />
                             <Slider
                                 Value="{Binding MaxLevel}"
                                 DockPanel.Dock="Left"
@@ -79,7 +79,7 @@
                             <Label DockPanel.Dock="Left" Content="{Binding MaxLevel}" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="250" />
                             <Slider
                                 Value="{Binding MinLevel}"
                                 DockPanel.Dock="Left"
@@ -87,6 +87,27 @@
                                 Maximum="4"
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinLevel}" />
+                        </DockPanel>
+                        
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Максимальная вероятность угадывания" Width="250" />
+                            <Slider
+                                Value="{Binding MaxGuessingProbability}"
+                                DockPanel.Dock="Left"
+                                Minimum="{Binding MinGuessingProbability}"
+                                Maximum="100"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MaxGuessingProbability}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Минимальная вероятность угадывания" Width="250" />
+                            <Slider
+                                Value="{Binding MinGuessingProbability}"
+                                DockPanel.Dock="Left"
+                                Minimum="0"
+                                Maximum="100"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MinGuessingProbability}" />
                         </DockPanel>
                         
                         <DockPanel>

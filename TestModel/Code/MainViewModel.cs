@@ -27,6 +27,8 @@ namespace TestModel.Code
         private double _maxComplexity = 4;
         private double _minLevel = -4;
         private double _maxLevel = 4;
+        private double _minGuessingProbability = 0;
+        private double _maxGuessingProbability = 0;
         private List<Student> _studentList;
         private List<Task> _taskList;
 
@@ -47,6 +49,7 @@ namespace TestModel.Code
             {
                 _minLevel = value;
                 OnPropertyChanged(nameof(MinLevel));
+                OnPropertyChanged(nameof(MaxLevel));
             }
         }
 
@@ -57,6 +60,7 @@ namespace TestModel.Code
             {
                 _maxLevel = value;
                 OnPropertyChanged(nameof(MaxLevel));
+                OnPropertyChanged(nameof(MinLevel));
             }
         }
 
@@ -77,7 +81,30 @@ namespace TestModel.Code
             {
                 _minComplexity = value;
                 OnPropertyChanged(nameof(MinComplexity));
+                OnPropertyChanged(nameof(MaxComplexity));
             }
+        }
+
+        public double MinGuessingProbability
+        {
+            get => Math.Round(_minGuessingProbability, 0);
+            set
+            {
+                _minGuessingProbability = value;
+                OnPropertyChanged(nameof(MinGuessingProbability));
+                OnPropertyChanged(nameof(MaxGuessingProbability));
+            } 
+        }
+
+        public double MaxGuessingProbability
+        {
+            get => Math.Round(_maxGuessingProbability, 0);
+            set
+            {
+                _maxGuessingProbability = value;
+                OnPropertyChanged(nameof(MaxGuessingProbability));
+                OnPropertyChanged(nameof(MinGuessingProbability));
+            } 
         }
 
         public double MaxComplexity
@@ -87,6 +114,7 @@ namespace TestModel.Code
             {
                 _maxComplexity = value;
                 OnPropertyChanged(nameof(MaxComplexity));
+                OnPropertyChanged(nameof(MinComplexity));
             }
         }
 
@@ -208,7 +236,7 @@ namespace TestModel.Code
             //StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
             //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
             //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
-            TaskList = TaskCreator.GenerateTasks(TaskAmount, MinComplexity, MaxComplexity);
+            TaskList = TaskCreator.GenerateTasks(TaskAmount, MinComplexity, MaxComplexity, MinGuessingProbability/100, MaxGuessingProbability/100);
 
 
             StudentSeriesCollection = new SeriesCollection
