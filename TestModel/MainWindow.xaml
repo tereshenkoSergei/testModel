@@ -8,33 +8,43 @@
         Title="MainWindow" Height="1000" Width="1000">
     <Grid>
 
+
         <TabControl>
             <TabItem Header="Задание параметров">
-
-                <DockPanel LastChildFill="True">
-                    <StackPanel DockPanel.Dock="Top" Height="300">
+                <DockPanel LastChildFill="False">
+                    <StackPanel Background="Gold" DockPanel.Dock="Top" Height="300">
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="170" />
-                            <Slider
-                                Value="{Binding StudentAmount}"
+                            <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="250" />
+                            <TextBox
                                 DockPanel.Dock="Left"
-                                Minimum="1"
-                                Maximum="200"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding StudentAmount}" />
+                                Text="{Binding StudentAmount}"
+                                PreviewTextInput="NumberValidationTextBox"
+                                Width="50" />
+                            <DockPanel DockPanel.Dock="Left">
+                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left"
+                                        Command="{Binding IncrementStudentAmountCommand}" />
+                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right"
+                                        Command="{Binding DecrementStudentAmountCommand}" />
+                            </DockPanel>
+                            <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Количество заданий" Width="170" />
-                            <Slider
-                                Value="{Binding TaskAmount}"
+                            <Label DockPanel.Dock="Left" Content="Количество заданий" Width="250" />
+                            <TextBox
                                 DockPanel.Dock="Left"
-                                Minimum="1"
-                                Maximum="200"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding TaskAmount}" />
+                                Text="{Binding TaskAmount}"
+                                PreviewTextInput="NumberValidationTextBox"
+                                Width="50" />
+                            <DockPanel DockPanel.Dock="Left">
+                                <Button Width="30" Height="30" Content="+" DockPanel.Dock="Left"
+                                        Command="{Binding IncrementTaskAmountCommand}" />
+                                <Button Width="30" Height="30" Content="-" DockPanel.Dock="right"
+                                        Command="{Binding DecrementTaskAmountCommand}" />
+                            </DockPanel>
+                            <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="250" />
                             <Slider
                                 Value="{Binding MaxComplexity}"
                                 DockPanel.Dock="Left"
@@ -44,7 +54,7 @@
                             <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="250" />
                             <Slider
                                 Value="{Binding MinComplexity}"
                                 DockPanel.Dock="Left"
@@ -54,7 +64,7 @@
                             <Label DockPanel.Dock="Left" Content="{Binding MinComplexity}" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="250" />
                             <Slider
                                 Value="{Binding MaxLevel}"
                                 DockPanel.Dock="Left"
@@ -64,7 +74,7 @@
                             <Label DockPanel.Dock="Left" Content="{Binding MaxLevel}" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="170" />
+                            <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="250" />
                             <Slider
                                 Value="{Binding MinLevel}"
                                 DockPanel.Dock="Left"
@@ -73,16 +83,93 @@
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinLevel}" />
                         </DockPanel>
-                        <Button Content="Сгенерировать транзакты и смымитировать тестирование" Command="{Binding GenerateTransactsCommand}" />
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Максимальная вероятность угадывания" Width="250" />
+                            <Slider
+                                Value="{Binding MaxGuessingProbability}"
+                                DockPanel.Dock="Left"
+                                Minimum="{Binding MinGuessingProbability}"
+                                Maximum="100"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MaxGuessingProbability}" />
+                            <Label DockPanel.Dock="Left" Content="%" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Минимальная вероятность угадывания" Width="250" />
+                            <Slider
+                                Value="{Binding MinGuessingProbability}"
+                                DockPanel.Dock="Left"
+                                Minimum="0"
+                                Maximum="100"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MinGuessingProbability}" />
+                            <Label DockPanel.Dock="Left" Content="%" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Button DockPanel.Dock="left" Content="Сгенерировать транзакты"
+                                    Command="{Binding GenerateTransactsCommand}"
+                                    Width="300"
+                                    Height="50" />
+                            <Button DockPanel.Dock="left" Content="Добавить транзакты"
+                                    Command="{Binding GenerateTransactsCommand}"
+                                    Width="300"
+                                    Height="50" />
+                            <Button DockPanel.Dock="left" Content="Запустить имитацию тестирования"
+                                    Command="{Binding RunTestsCommand}"
+                                    Width="300"
+                                    Height="50" />
+
+                            <Label DockPanel.Dock="Left" Content="" Width="170" />
+                            <Label DockPanel.Dock="left" Width="170" />
+
+                        </DockPanel>
+                        
                     </StackPanel>
+     
+                        <DockPanel Dock="Top" >
+
+                            <DataGrid DockPanel.Dock="left"
+                                      Height="400"
+                                      ScrollViewer.CanContentScroll="True"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectedIndex="{Binding SelectedStudentId}"
+                                      ItemsSource="{Binding StudentList}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                        Binding="{Binding Id}" />
+                                    <DataGridTextColumn Header="Уровень подготовки" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding Level}" />
+                                    <!--Selected msi's values list-->
+                                </DataGrid.Columns>
+                            </DataGrid>
 
 
-                    <!-- -->
-                    <!-- <Button DockPanel.Dock="Right" Background="DarkGreen" Content="Правая кнопка" /> -->
-                    <!-- <Button Background="LightGreen" Content="Центр" /> -->
+                            <DataGrid DockPanel.Dock="right"
+                                      Height="400"
+                                      ScrollViewer.CanContentScroll="True"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectedIndex="{Binding SelectedTaskId}"
+                                      ItemsSource="{Binding TaskList}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                        Binding="{Binding Id}" />
+                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding Complexity}" />
+                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding GuessingProbability}" />
+                                    <DataGridTextColumn Header="Баллы" IsReadOnly="False" Width="90"
+                                                        Binding="{Binding Weight}" />
+                                    <!--Selected msi's values list-->
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+
+                        </DockPanel>
+                   
+
                 </DockPanel>
-
-
             </TabItem>
             <TabItem Header="Распределение испытуемых">
                 <Grid>
@@ -108,20 +195,16 @@
                     </lvc:CartesianChart>
                 </Grid>
             </TabItem>
-            
-            
+
             <TabItem Header="Результаты">
-                <Grid>
-                    <lvc:CartesianChart Series="{Binding ResultSeriesCollection}" LegendLocation="Left">
-                        <lvc:CartesianChart.AxisX>
-                            <lvc:Axis Title="" Labels="{Binding TaskLabels}" />
-                        </lvc:CartesianChart.AxisX>
-                        <lvc:CartesianChart.AxisY>
-                            <lvc:Axis Title="" LabelFormatter="{Binding Formatter}" />
-                        </lvc:CartesianChart.AxisY>
-                    </lvc:CartesianChart>
-                </Grid>
+
+                <lvc:CartesianChart x:Name="EMT_Chart1"
+                                    Series="{Binding MainCartesianChart.Series}"
+                                    LegendLocation="Bottom"
+                                    Zoom="XY" Pan="XY" />
+
             </TabItem>
+
         </TabControl>
 
     </Grid>
