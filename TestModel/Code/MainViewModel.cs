@@ -5,6 +5,7 @@ using System.ComponentModel;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
+using System.Threading;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Input;
@@ -217,6 +218,8 @@ namespace TestModel.Code
         public RelayCommand IncrementTaskAmountCommand { get; set; }
         public RelayCommand DecrementTaskAmountCommand { get; set; }
         public RelayCommand RunTestsCommand { get; set; }
+        public RelayCommand AddTransactsCommand { get; set; }
+        public RelayCommand ClearTransactsCommand { get; set; }
         public SeriesCollection StudentSeriesCollection { get; set; }
         public SeriesCollection TaskSeriesCollection { get; set; }
         public SeriesCollection ResultSeriesCollection { get; set; }
@@ -237,6 +240,8 @@ namespace TestModel.Code
             IncrementTaskAmountCommand = new RelayCommand(IncrementTaskAmount, CanIncrementTaskAmount);
             DecrementTaskAmountCommand = new RelayCommand(DecrementTaskAmount, CanDecrementTaskAmount);
             RunTestsCommand = new RelayCommand(RunTests, CanRunTests);
+            AddTransactsCommand = new RelayCommand(AddTransacts, CanAddTransacts);
+            ClearTransactsCommand = new RelayCommand(ClearTransacts, CanClearTransacts);
 
             MainCartesianChart = new CartesianChart();
             MainCartesianChart.Series = new SeriesCollection
@@ -299,6 +304,48 @@ namespace TestModel.Code
             return TaskAmount > 0;
         }
 
+        public void AddTransacts(object param)
+        {
+            ObservableCollection<Student> studentsToAdd;
+            ObservableCollection<Task> tasksToAdd;
+
+            studentsToAdd = new ObservableCollection<Student>(
+                StudentCreator.GenerateStudents(StudentAmount, MinLevel, MaxLevel));
+
+            Thread.Sleep(1);
+            tasksToAdd = new ObservableCollection<Task>(
+                TaskCreator.GenerateTasks(TaskAmount,
+                    MinComplexity,
+                    MaxComplexity,
+                    MinGuessingProbability / 100,
+                    MaxGuessingProbability / 100));
+
+            if(StudentList == null) StudentList = new ObservableCollection<Student>();
+            if(TaskList == null) TaskList = new ObservableCollection<Task>();
+            
+            foreach (var student in studentsToAdd) StudentList.Add(student);
+            foreach (var task in tasksToAdd) TaskList.Add(task);
+            
+            OnPropertyChanged(nameof(StudentList));
+            OnPropertyChanged(nameof(TaskList));
+        }
+
+        public void ClearTransacts(object param)
+        {
+            StudentList = new ObservableCollection<Student>();
+            TaskList = new ObservableCollection<Task>();
+            OnPropertyChanged(nameof(StudentList));
+            OnPropertyChanged(nameof(TaskList));
+        }
+
+        public bool CanClearTransacts(object param)
+        {
+            return true;
+        }
+        public bool CanAddTransacts(object param)
+        {
+            return true;
+        }
         public void GenerateTransacts(object param)
         {
             StudentList =

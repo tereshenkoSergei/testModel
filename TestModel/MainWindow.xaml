@@ -46,22 +46,22 @@
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="250" />
                             <Slider
-                                Value="{Binding MaxComplexity}"
-                                DockPanel.Dock="Left"
-                                Minimum="{Binding MinComplexity}"
-                                Maximum="4"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
-                        </DockPanel>
-                        <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="250" />
-                            <Slider
                                 Value="{Binding MinComplexity}"
                                 DockPanel.Dock="Left"
                                 Minimum="-4"
                                 Maximum="4"
                                 Width="200" />
                             <Label DockPanel.Dock="Left" Content="{Binding MinComplexity}" />
+                        </DockPanel>
+                        <DockPanel>
+                            <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="250" />
+                            <Slider
+                                Value="{Binding MaxComplexity}"
+                                DockPanel.Dock="Left"
+                                Minimum="{Binding MinComplexity}"
+                                Maximum="4"
+                                Width="200" />
+                            <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
                         </DockPanel>
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="250" />
@@ -106,17 +106,21 @@
                             <Label DockPanel.Dock="Left" Content="%" />
                         </DockPanel>
                         <DockPanel>
-                            <Button DockPanel.Dock="left" Content="Сгенерировать транзакты"
+                            <Button DockPanel.Dock="left" Content="Сгенерировать транзакты заново"
                                     Command="{Binding GenerateTransactsCommand}"
-                                    Width="300"
+                                    Width="200"
                                     Height="50" />
                             <Button DockPanel.Dock="left" Content="Добавить транзакты"
-                                    Command="{Binding GenerateTransactsCommand}"
-                                    Width="300"
+                                    Command="{Binding AddTransactsCommand}"
+                                    Width="200"
+                                    Height="50" />
+                            <Button DockPanel.Dock="left" Content="Очистить тразакты"
+                                    Command="{Binding ClearTransactsCommand}"
+                                    Width="200"
                                     Height="50" />
                             <Button DockPanel.Dock="left" Content="Запустить имитацию тестирования"
                                     Command="{Binding RunTestsCommand}"
-                                    Width="300"
+                                    Width="200"
                                     Height="50" />
 
                             <Label DockPanel.Dock="Left" Content="" Width="170" />
@@ -138,7 +142,7 @@
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
                                                         Binding="{Binding Id}" />
-                                    <DataGridTextColumn Header="Уровень подготовки" IsReadOnly="False" Width="90"
+                                    <DataGridTextColumn Header="Уровень подготовки" IsReadOnly="False" Width="150"
                                                         Binding="{Binding Level}" />
                                     <!--Selected msi's values list-->
                                 </DataGrid.Columns>
@@ -147,6 +151,7 @@
 
                             <DataGrid DockPanel.Dock="right"
                                       Height="400"
+                                      
                                       ScrollViewer.CanContentScroll="True"
                                       AutoGenerateColumns="False"
                                       CanUserAddRows="False"
@@ -155,9 +160,9 @@
                                 <DataGrid.Columns>
                                     <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
                                                         Binding="{Binding Id}" />
-                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="False" Width="90"
+                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="False" Width="150"
                                                         Binding="{Binding Complexity}" />
-                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="90"
+                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="150"
                                                         Binding="{Binding GuessingProbability}" />
                                     <DataGridTextColumn Header="Баллы" IsReadOnly="False" Width="90"
                                                         Binding="{Binding Weight}" />
