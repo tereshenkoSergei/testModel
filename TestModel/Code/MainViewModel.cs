@@ -34,10 +34,33 @@ namespace TestModel.Code
         private double _maxGuessingProbability = 0;
         private int _selectedStudentId = 0;
         private int _selectedTaskId = 0;
+        private int _selectedTaskIdResult = 0;
         private ObservableCollection<Student> _studentList;
         private ObservableCollection<Task> _taskList;
         private Student SelectedStudent { get; set; }
         private Task SelectedTask { get; set; }
+        private Task SelectedTaskResult { get; set; }
+        public event PropertyChangedEventHandler PropertyChanged;
+        private Result _globalResult;
+        public RelayCommand GenerateTransactsCommand { get; set; }
+        public RelayCommand IncrementStudentAmountCommand { get; set; }
+        public RelayCommand DecrementStudentAmountCommand { get; set; }
+        public RelayCommand IncrementTaskAmountCommand { get; set; }
+        public RelayCommand DecrementTaskAmountCommand { get; set; }
+        public RelayCommand RunTestsCommand { get; set; }
+        public RelayCommand AddTransactsCommand { get; set; }
+        public RelayCommand ClearTransactsCommand { get; set; }
+        public SeriesCollection StudentSeriesCollection { get; set; }
+        public SeriesCollection TaskSeriesCollection { get; set; }
+        public SeriesCollection ResultSeriesCollection { get; set; }
+        public string[] StudentLabels { get; set; }
+        public string[] TaskLabels { get; set; }
+        public Func<int, string> Formatter { get; set; }
+
+        public CartesianChart MainCartesianChart { get; set; }
+        public CartesianChart TaskCompletionCartesianChart { get; set; }
+        public CartesianChart DifferenceCartesianChart { get; set; }
+        public const int POCKETS = 12;
 
         public int StudentAmount
         {
@@ -209,6 +232,50 @@ namespace TestModel.Code
             }
         }
 
+        public int SelectedTaskIdResult
+        {
+            get
+            {
+                if (TaskList.Count <= 0)
+                {
+                    SelectedTaskResult = new Task(0, 0);
+                }
+                else
+                {
+                    if (_selectedTaskIdResult < 0) _selectedTaskIdResult = 0;
+
+                    SelectedTaskResult = TaskList[_selectedTaskIdResult];
+                }
+
+                return _selectedTaskIdResult;
+            }
+            set
+            {
+                _selectedTaskIdResult = value;
+
+                if (TaskList.Count <= 0) return;
+                if (_selectedTaskIdResult < 0)
+                {
+                    _selectedTaskIdResult = 0;
+                    SelectedTaskResult = TaskList[_selectedTaskIdResult];
+                }
+
+                {
+                    if (_globalResult != null)
+                        TaskCompletionCartesianChart.Series = new SeriesCollection
+                        {
+                            new LineSeries
+                            {
+                                Values = TransactsToChartElementsConverter.GetResultDistribution(_globalResult, _selectedTaskIdResult, POCKETS),
+                            }
+                        };
+                }
+
+                OnPropertyChanged(nameof(TaskList));
+                OnPropertyChanged(nameof(SelectedTaskResult));
+            }
+        }
+
         public ObservableCollection<Task> TaskList
         {
             get => _taskList;
@@ -218,27 +285,6 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(TaskList));
             }
         }
-
-        public event PropertyChangedEventHandler PropertyChanged;
-        public RelayCommand GenerateTransactsCommand { get; set; }
-        public RelayCommand IncrementStudentAmountCommand { get; set; }
-        public RelayCommand DecrementStudentAmountCommand { get; set; }
-        public RelayCommand IncrementTaskAmountCommand { get; set; }
-        public RelayCommand DecrementTaskAmountCommand { get; set; }
-        public RelayCommand RunTestsCommand { get; set; }
-        public RelayCommand AddTransactsCommand { get; set; }
-        public RelayCommand ClearTransactsCommand { get; set; }
-        public SeriesCollection StudentSeriesCollection { get; set; }
-        public SeriesCollection TaskSeriesCollection { get; set; }
-        public SeriesCollection ResultSeriesCollection { get; set; }
-        public string[] StudentLabels { get; set; }
-        public string[] TaskLabels { get; set; }
-        public Func<int, string> Formatter { get; set; }
-
-        public CartesianChart MainCartesianChart { get; set; }
-        public CartesianChart TaskCompletionCartesianChart { get; set; }
-        public CartesianChart DifferenceCartesianChart { get; set; }
-        public const int POCKETS = 12;
 
         #endregion
 
@@ -471,13 +517,12 @@ namespace TestModel.Code
                     Values = new ChartValues<double>(trustDown)
                 }
             };
-
+            _globalResult = result;
             TaskCompletionCartesianChart.Series = new SeriesCollection
             {
                 new LineSeries
                 {
                     Values = TransactsToChartElementsConverter.GetResultDistribution(result, 0, POCKETS),
-                    Title = StudentLabels[0]
                 }
             };
         }

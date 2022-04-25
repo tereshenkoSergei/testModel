@@ -228,13 +228,45 @@
             </TabItem>
             
             <TabItem Header="Статистика для заданий">
-                
-                <lvc:CartesianChart
-                    Series="{Binding TaskCompletionCartesianChart.Series}"
-                    LegendLocation="Bottom"
-                    Zoom="XY" Pan="XY" />
+   
 
                 
+                        <DockPanel Dock="Top" >
+
+                                         
+                            <lvc:CartesianChart
+                                Series="{Binding TaskCompletionCartesianChart.Series}"
+                                LegendLocation="Bottom"
+                                Zoom="XY" Pan="XY" 
+                                DockPanel.Dock="Top"
+                                Height="600"
+                                />
+                            
+
+                            <DataGrid DockPanel.Dock="Bottom"
+                                      Height="200"
+                                      
+                                      ScrollViewer.CanContentScroll="True"
+                                      AutoGenerateColumns="False"
+                                      CanUserAddRows="False"
+                                      SelectedIndex="{Binding SelectedTaskIdResult}"
+                                      ItemsSource="{Binding TaskList}">
+                                <DataGrid.Columns>
+                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                        Binding="{Binding Id}" />
+                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="True" Width="150"
+                                                        Binding="{Binding Complexity}" />
+                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="True" Width="150"
+                                                        Binding="{Binding GuessingProbability}" />
+                                    <DataGridTextColumn Header="Баллы" IsReadOnly="True" Width="90"
+                                                        Binding="{Binding Weight}" />
+                                    <!--Selected msi's values list-->
+                                </DataGrid.Columns>
+                            </DataGrid>
+
+
+                        </DockPanel>
+                   
             </TabItem>
 
         </TabControl>

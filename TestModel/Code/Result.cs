@@ -55,7 +55,7 @@ namespace TestModel.Code
 
             for (int i = 0; i < ResultMatrix.Length; i++)
             {
-                resultDictionary.Add(StudentList[i], (ResultMatrix[i][taskId]) == 0);
+                resultDictionary.Add(StudentList[i], (ResultMatrix[i][taskId]) != 0);
             }
 
             return resultDictionary;
