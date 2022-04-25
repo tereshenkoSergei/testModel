@@ -55,6 +55,8 @@ namespace TestModel.Code
             set
             {
                 _minLevel = value;
+                if (_minLevel > 4) _minLevel = 4;
+                if (_minLevel < -4) _minLevel = -4;
                 OnPropertyChanged(nameof(MinLevel));
                 OnPropertyChanged(nameof(MaxLevel));
             }
@@ -66,6 +68,8 @@ namespace TestModel.Code
             set
             {
                 _maxLevel = value;
+                if (_maxLevel > 4) _maxLevel = 4;
+                if (_maxLevel < -4) _maxLevel = -4;
                 OnPropertyChanged(nameof(MaxLevel));
                 OnPropertyChanged(nameof(MinLevel));
             }
@@ -87,6 +91,8 @@ namespace TestModel.Code
             set
             {
                 _minComplexity = value;
+                if (_minComplexity > 4) _minComplexity = 4;
+                if (_minComplexity < -4) _minComplexity = -4;
                 OnPropertyChanged(nameof(MinComplexity));
                 OnPropertyChanged(nameof(MaxComplexity));
             }
@@ -120,6 +126,8 @@ namespace TestModel.Code
             set
             {
                 _maxComplexity = value;
+                if (_maxComplexity > 4) _maxComplexity = 4;
+                if (_maxComplexity < -4) _maxComplexity = -4;
                 OnPropertyChanged(nameof(MaxComplexity));
                 OnPropertyChanged(nameof(MinComplexity));
             }
@@ -228,6 +236,7 @@ namespace TestModel.Code
         public Func<int, string> Formatter { get; set; }
 
         public CartesianChart MainCartesianChart { get; set; }
+        public CartesianChart DifferenceCartesianChart { get; set; }
         public const int POCKETS = 12;
 
         #endregion
@@ -244,6 +253,7 @@ namespace TestModel.Code
             ClearTransactsCommand = new RelayCommand(ClearTransacts, CanClearTransacts);
 
             MainCartesianChart = new CartesianChart();
+            DifferenceCartesianChart = new CartesianChart();
             MainCartesianChart.Series = new SeriesCollection
             {
                 new LineSeries
@@ -342,10 +352,12 @@ namespace TestModel.Code
         {
             return true;
         }
+
         public bool CanAddTransacts(object param)
         {
             return true;
         }
+
         public void GenerateTransacts(object param)
         {
             StudentList =
@@ -391,37 +403,27 @@ namespace TestModel.Code
 
         public void RunTests(object param)
         {
-            Dictionary<Double, double> result = new StandardTesterModeler()
+            Dictionary<int, KeyValuePair<double, double>> result = new StandardTesterModeler()
                 .RunTest(StudentList.ToList(), TaskList.ToList())
                 .GetResultDictionary();
 
             List<Double> studentLevels = new List<double>();
             List<Double> resultsOfStudents = new List<double>();
-            List<Double> plug = new List<double>();
+            List<Double> difference = new List<double>();
+            List<double> zeroLine = new List<double>();
+            List<double> trustUp = new List<double>();
+            List<double> trustDown = new List<double>();
 
+            
             foreach (var res in result)
             {
-                studentLevels.Add(res.Key);
-                resultsOfStudents.Add(res.Value);
-                plug.Add(0);
+                studentLevels.Add(((double)100/8)*(res.Value.Key+ 4));
+                resultsOfStudents.Add(((double)100/8)*(res.Value.Value + 4));
+                difference.Add(((double)100/8)*(res.Value.Value - res.Value.Key));
+                zeroLine.Add(0);
+                trustUp.Add(10);
+                trustDown.Add(-10);
             }
-
-
-            ResultSeriesCollection = new SeriesCollection
-            {
-                new ColumnSeries
-                {
-                    Values = new ChartValues<Double>(studentLevels)
-                },
-                new ColumnSeries
-                {
-                    Values = new ChartValues<Double>(resultsOfStudents)
-                },
-                new ColumnSeries
-                {
-                    Values = new ChartValues<Double>(plug)
-                }
-            };
 
 
             MainCartesianChart.Series = new SeriesCollection
@@ -435,6 +437,34 @@ namespace TestModel.Code
                 {
                     Title = "Levels",
                     Values = new ChartValues<double>(studentLevels)
+                },
+                new LineSeries
+                {
+                    Title = "dif",
+                    Values = new ChartValues<double>(difference)
+                }
+            };
+            DifferenceCartesianChart.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Title = "dif",
+                    Values = new ChartValues<double>(difference)
+                },
+                new LineSeries
+                {
+                    Title = "0",
+                    Values = new ChartValues<double>(zeroLine)
+                },
+                new LineSeries
+                {
+                    Title = "Доверительный интервал верхний",
+                    Values = new ChartValues<double>(trustUp)
+                },
+                new LineSeries
+                {
+                    Title = "Доверительный интервал нижний",
+                    Values = new ChartValues<double>(trustDown)
                 }
             };
         }

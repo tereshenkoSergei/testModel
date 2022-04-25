@@ -18,6 +18,15 @@ namespace TestModel
         {
             Regex regex = new Regex("[^0-9]+");
             e.Handled = regex.IsMatch(e.Text);
+        }   
+        private void DoubleNumberValidationTextBox(object sender, TextCompositionEventArgs e)
+        {
+            Regex regex = new Regex("[^0-9]+");
+            Regex regexWithPoint = new Regex("[^0-9]+.[^0-9]+");
+            e.Handled = 
+                (regex.IsMatch(e.Text) ||
+                 regexWithPoint.IsMatch(e.Text)
+                 );
         }
     }
     

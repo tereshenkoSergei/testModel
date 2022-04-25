@@ -12,7 +12,7 @@
         <TabControl>
             <TabItem Header="Задание параметров">
                 <DockPanel LastChildFill="False">
-                    <StackPanel Background="Gold" DockPanel.Dock="Top" Height="300">
+                    <StackPanel DockPanel.Dock="Top" Height="300">
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Количество испытуемых" Width="250" />
                             <TextBox
@@ -51,7 +51,12 @@
                                 Minimum="-4"
                                 Maximum="4"
                                 Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding MinComplexity}" />
+                            <TextBox 
+                                Width="50"
+                                PreviewTextInput="DoubleNumberValidationTextBox" 
+                                DockPanel.Dock="Left" 
+                                Text="{Binding MinComplexity}" />
+
                         </DockPanel>
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="250" />
@@ -61,7 +66,11 @@
                                 Minimum="{Binding MinComplexity}"
                                 Maximum="4"
                                 Width="200" />
-                            <Label DockPanel.Dock="Left" Content="{Binding MaxComplexity}" />
+                            <TextBox 
+                                Width="50"
+                                PreviewTextInput="DoubleNumberValidationTextBox"
+                                DockPanel.Dock="Left"
+                                     Text="{Binding MaxComplexity}" />
                         </DockPanel>
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="250" />
@@ -203,8 +212,16 @@
 
             <TabItem Header="Результаты">
 
-                <lvc:CartesianChart x:Name="EMT_Chart1"
+                <lvc:CartesianChart
                                     Series="{Binding MainCartesianChart.Series}"
+                                    LegendLocation="Bottom"
+                                    Zoom="XY" Pan="XY" />
+
+            </TabItem>
+            <TabItem Header="Отклонения">
+
+                <lvc:CartesianChart
+                                    Series="{Binding DifferenceCartesianChart.Series}"
                                     LegendLocation="Bottom"
                                     Zoom="XY" Pan="XY" />
 
