@@ -236,6 +236,7 @@ namespace TestModel.Code
         public Func<int, string> Formatter { get; set; }
 
         public CartesianChart MainCartesianChart { get; set; }
+        public CartesianChart TaskCompletionCartesianChart { get; set; }
         public CartesianChart DifferenceCartesianChart { get; set; }
         public const int POCKETS = 12;
 
@@ -262,6 +263,8 @@ namespace TestModel.Code
                     Values = new ChartValues<double> {0}
                 }
             };
+
+            TaskCompletionCartesianChart = new CartesianChart();
         }
 
         [NotifyPropertyChangedInvocator]
@@ -330,12 +333,12 @@ namespace TestModel.Code
                     MinGuessingProbability / 100,
                     MaxGuessingProbability / 100));
 
-            if(StudentList == null) StudentList = new ObservableCollection<Student>();
-            if(TaskList == null) TaskList = new ObservableCollection<Task>();
-            
+            if (StudentList == null) StudentList = new ObservableCollection<Student>();
+            if (TaskList == null) TaskList = new ObservableCollection<Task>();
+
             foreach (var student in studentsToAdd) StudentList.Add(student);
             foreach (var task in tasksToAdd) TaskList.Add(task);
-            
+
             OnPropertyChanged(nameof(StudentList));
             OnPropertyChanged(nameof(TaskList));
         }
@@ -403,10 +406,11 @@ namespace TestModel.Code
 
         public void RunTests(object param)
         {
-            Dictionary<int, KeyValuePair<double, double>> result = new StandardTesterModeler()
-                .RunTest(StudentList.ToList(), TaskList.ToList())
-                .GetResultDictionary();
+            Result result = new StandardTesterModeler()
+                .RunTest(StudentList.ToList(), TaskList.ToList());
 
+
+            Dictionary<int, KeyValuePair<double, double>> resultDictionary = result.GetResultDictionary();
             List<Double> studentLevels = new List<double>();
             List<Double> resultsOfStudents = new List<double>();
             List<Double> difference = new List<double>();
@@ -414,12 +418,12 @@ namespace TestModel.Code
             List<double> trustUp = new List<double>();
             List<double> trustDown = new List<double>();
 
-            
-            foreach (var res in result)
+
+            foreach (var res in resultDictionary)
             {
-                studentLevels.Add(((double)100/8)*(res.Value.Key+ 4));
-                resultsOfStudents.Add(((double)100/8)*(res.Value.Value + 4));
-                difference.Add(((double)100/8)*(res.Value.Value - res.Value.Key));
+                studentLevels.Add(((double) 100 / 8) * (res.Value.Key + 4));
+                resultsOfStudents.Add(((double) 100 / 8) * (res.Value.Value + 4));
+                difference.Add(((double) 100 / 8) * (res.Value.Value - res.Value.Key));
                 zeroLine.Add(0);
                 trustUp.Add(10);
                 trustDown.Add(-10);
@@ -465,6 +469,15 @@ namespace TestModel.Code
                 {
                     Title = "Доверительный интервал нижний",
                     Values = new ChartValues<double>(trustDown)
+                }
+            };
+
+            TaskCompletionCartesianChart.Series = new SeriesCollection
+            {
+                new LineSeries
+                {
+                    Values = TransactsToChartElementsConverter.GetResultDistribution(result, 0, POCKETS),
+                    Title = StudentLabels[0]
                 }
             };
         }

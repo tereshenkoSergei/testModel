@@ -27,7 +27,8 @@ namespace TestModel.Code
         public Dictionary<int, KeyValuePair<double, double>> GetResultDictionary()
         {
             int id = 0;
-            Dictionary<int, KeyValuePair<double, double>> resultDictionary = new Dictionary<int, KeyValuePair<double, double>>();
+            Dictionary<int, KeyValuePair<double, double>> resultDictionary =
+                new Dictionary<int, KeyValuePair<double, double>>();
 
             for (int i = 0; i < ResultMatrix.Length; i++)
             {
@@ -43,6 +44,18 @@ namespace TestModel.Code
                 resultInLogit = 8 * (intResult / maxResult) - 4;
                 resultDictionary.Add(id, new KeyValuePair<double, double>(StudentList[i].Level, resultInLogit));
                 id++;
+            }
+
+            return resultDictionary;
+        }
+
+        public Dictionary<Student, bool> GetCompleteStudentsForTask(int taskId)
+        {
+            Dictionary<Student, bool> resultDictionary = new Dictionary<Student, bool>();
+
+            for (int i = 0; i < ResultMatrix.Length; i++)
+            {
+                resultDictionary.Add(StudentList[i], (ResultMatrix[i][taskId]) == 0);
             }
 
             return resultDictionary;

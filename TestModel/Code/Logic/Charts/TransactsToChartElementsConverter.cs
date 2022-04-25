@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using System.Windows.Documents;
 using LiveCharts;
 using LiveCharts.Wpf;
@@ -24,6 +25,57 @@ namespace TestModel.Code.Logic.Charts
             return DoubleListToChartValues(doubles, pockets);
         }
 
+        private static List<double> GetResultDistributionDoubleList(Result result, int taskId, int pockets)
+        {
+            Dictionary<Student, bool> dictionary = result.GetCompleteStudentsForTask(taskId);
+            int[] completeTaskStudentAmountInPocket = new int[pockets];
+            int[] amountOfStudentsInPockets = new int[pockets];
+            double[] percent = new double[pockets];
+            List<Student> students = new List<Student>(dictionary.Keys.ToList());
+            students.Sort();
+            double minStudentLevel = students[0].Level;
+            double maxStudentLevel = students[students.Count - 1].Level;
+            double[] pocketsValues = new double[pockets];
+
+            double currentPocketValue = minStudentLevel;
+            for (int i = 0; i < pockets; i++)
+            {
+                pocketsValues[i] = currentPocketValue;
+                currentPocketValue += ((double) (maxStudentLevel - minStudentLevel) / pockets);
+            }
+
+            foreach (KeyValuePair<Student, bool> pair in dictionary)
+            {
+                for (int i = 0; i < pockets - 1; i++)
+                {
+                    if (pair.Key.Level >= pocketsValues[i] &&
+                        pair.Key.Level < pocketsValues[i + 1])
+                    {
+                        amountOfStudentsInPockets[i]++;
+                        if (pair.Value) completeTaskStudentAmountInPocket[i]++;
+                    }
+                }
+            }
+
+            for (int i = 0; i < pockets; i++)
+            {
+                percent[i] = (double) (((double) completeTaskStudentAmountInPocket[i]) /
+                                       ((double) amountOfStudentsInPockets[i])) * 100;
+            }
+
+            return new List<double>(percent);
+        }
+
+        public static ChartValues<double> GetResultDistribution(Result result, int taskId, int pockets)
+        {
+            return new ChartValues<double>(GetResultDistributionDoubleList(result, taskId, pockets));
+        }
+
+        public static string[] GetLabelsForTaskResult(Result result, int taskId, int pockets)
+        {
+            return GetLablesForDoubles(GetResultDistributionDoubleList(result, taskId, pockets), pockets);
+        }
+
         public static string[] GetLabelsForStudentDistribution(List<Student> studentList, int pockets)
         {
             List<Double> doubles = new List<double>();
@@ -38,7 +90,7 @@ namespace TestModel.Code.Logic.Charts
             return GetLablesForDoubles(doubles, pockets);
         }
 
-        private static string[] GetLablesForDoubles(List<Double> doubles, int pockets)
+        public static string[] GetLablesForDoubles(List<Double> doubles, int pockets)
         {
             doubles.Sort();
             string[] labels = new string[pockets];
@@ -47,8 +99,8 @@ namespace TestModel.Code.Logic.Charts
 
             foreach (var d in doubles)
             {
-                minValue = minValue > d? d: minValue;
-                maxValue = maxValue < d? d: maxValue;
+                minValue = minValue > d ? d : minValue;
+                maxValue = maxValue < d ? d : maxValue;
             }
 
             Double current = minValue;
@@ -62,12 +114,12 @@ namespace TestModel.Code.Logic.Charts
 
             return labels;
         }
+
         private static ChartValues<int> DoubleListToChartValues(List<Double> doubles, int pockets)
         {
-            
             doubles.Sort();
             double minValue = doubles[0];
-            double maxValue = doubles[doubles.Count-1];
+            double maxValue = doubles[doubles.Count - 1];
             Double sizeOfPocket = Math.Abs((maxValue - minValue) / pockets);
 
             int[] distribution = new int[pockets];

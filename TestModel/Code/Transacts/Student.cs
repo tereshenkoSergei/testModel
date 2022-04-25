@@ -2,7 +2,7 @@ using System;
 
 namespace TestModel.Code.Transacts
 {
-    public class Student
+    public class Student : IComparable
     {
         private double _level;
         private static long currentId = 0;
@@ -31,6 +31,13 @@ namespace TestModel.Code.Transacts
         public string ToString()
         {
             return '[' + Id + "] " + Math.Round(Level, 3);
+        }
+
+        public int CompareTo(object obj)
+        {
+            if(!(obj is Student)) throw  new ArgumentException();
+            Student compareStudent = (Student) obj;
+            return (int) ((this._level - compareStudent._level) * 1000);
         }
     }
 }

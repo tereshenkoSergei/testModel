@@ -226,6 +226,16 @@
                                     Zoom="XY" Pan="XY" />
 
             </TabItem>
+            
+            <TabItem Header="Статистика для заданий">
+                
+                <lvc:CartesianChart
+                    Series="{Binding TaskCompletionCartesianChart.Series}"
+                    LegendLocation="Bottom"
+                    Zoom="XY" Pan="XY" />
+
+                
+            </TabItem>
 
         </TabControl>
 
