@@ -51,10 +51,10 @@
                                 Minimum="-4"
                                 Maximum="4"
                                 Width="200" />
-                            <TextBox 
+                            <TextBox
                                 Width="50"
-                                PreviewTextInput="DoubleNumberValidationTextBox" 
-                                DockPanel.Dock="Left" 
+                                PreviewTextInput="DoubleNumberValidationTextBox"
+                                DockPanel.Dock="Left"
                                 Text="{Binding MinComplexity}" />
 
                         </DockPanel>
@@ -66,11 +66,11 @@
                                 Minimum="{Binding MinComplexity}"
                                 Maximum="4"
                                 Width="200" />
-                            <TextBox 
+                            <TextBox
                                 Width="50"
                                 PreviewTextInput="DoubleNumberValidationTextBox"
                                 DockPanel.Dock="Left"
-                                     Text="{Binding MaxComplexity}" />
+                                Text="{Binding MaxComplexity}" />
                         </DockPanel>
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="250" />
@@ -136,52 +136,52 @@
                             <Label DockPanel.Dock="left" Width="170" />
 
                         </DockPanel>
-                        
+
                     </StackPanel>
-     
-                        <DockPanel Dock="Top" >
 
-                            <DataGrid DockPanel.Dock="left"
-                                      Height="400"
-                                      ScrollViewer.CanContentScroll="True"
-                                      AutoGenerateColumns="False"
-                                      CanUserAddRows="False"
-                                      SelectedIndex="{Binding SelectedStudentId}"
-                                      ItemsSource="{Binding StudentList}">
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
-                                                        Binding="{Binding Id}" />
-                                    <DataGridTextColumn Header="Уровень подготовки" IsReadOnly="False" Width="150"
-                                                        Binding="{Binding Level}" />
-                                    <!--Selected msi's values list-->
-                                </DataGrid.Columns>
-                            </DataGrid>
+                    <DockPanel Dock="Top">
 
-
-                            <DataGrid DockPanel.Dock="right"
-                                      Height="400"
-                                      
-                                      ScrollViewer.CanContentScroll="True"
-                                      AutoGenerateColumns="False"
-                                      CanUserAddRows="False"
-                                      SelectedIndex="{Binding SelectedTaskId}"
-                                      ItemsSource="{Binding TaskList}">
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
-                                                        Binding="{Binding Id}" />
-                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="False" Width="150"
-                                                        Binding="{Binding Complexity}" />
-                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="150"
-                                                        Binding="{Binding GuessingProbability}" />
-                                    <DataGridTextColumn Header="Баллы" IsReadOnly="False" Width="90"
-                                                        Binding="{Binding Weight}" />
-                                    <!--Selected msi's values list-->
-                                </DataGrid.Columns>
-                            </DataGrid>
+                        <DataGrid DockPanel.Dock="left"
+                                  Height="400"
+                                  ScrollViewer.CanContentScroll="True"
+                                  AutoGenerateColumns="False"
+                                  CanUserAddRows="False"
+                                  SelectedIndex="{Binding SelectedStudentId}"
+                                  ItemsSource="{Binding StudentList}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                    Binding="{Binding Id}" />
+                                <DataGridTextColumn Header="Уровень подготовки" IsReadOnly="False" Width="150"
+                                                    Binding="{Binding Level}" />
+                                <!--Selected msi's values list-->
+                            </DataGrid.Columns>
+                        </DataGrid>
 
 
-                        </DockPanel>
-                   
+                        <DataGrid DockPanel.Dock="right"
+                                  Height="400"
+
+                                  ScrollViewer.CanContentScroll="True"
+                                  AutoGenerateColumns="False"
+                                  CanUserAddRows="False"
+                                  SelectedIndex="{Binding SelectedTaskId}"
+                                  ItemsSource="{Binding TaskList}">
+                            <DataGrid.Columns>
+                                <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                    Binding="{Binding Id}" />
+                                <DataGridTextColumn Header="Уровень сложности" IsReadOnly="False" Width="150"
+                                                    Binding="{Binding Complexity}" />
+                                <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="150"
+                                                    Binding="{Binding GuessingProbability}" />
+                                <DataGridTextColumn Header="Баллы" IsReadOnly="False" Width="90"
+                                                    Binding="{Binding Weight}" />
+                                <!--Selected msi's values list-->
+                            </DataGrid.Columns>
+                        </DataGrid>
+
+
+                    </DockPanel>
+
 
                 </DockPanel>
             </TabItem>
@@ -213,60 +213,58 @@
             <TabItem Header="Результаты">
 
                 <lvc:CartesianChart
-                                    Series="{Binding MainCartesianChart.Series}"
-                                    LegendLocation="Bottom"
-                                    Zoom="XY" Pan="XY" />
+                    Series="{Binding MainCartesianChart.Series}"
+                    LegendLocation="Bottom"
+                    Zoom="XY" Pan="XY" />
 
             </TabItem>
             <TabItem Header="Отклонения">
 
                 <lvc:CartesianChart
-                                    Series="{Binding DifferenceCartesianChart.Series}"
-                                    LegendLocation="Bottom"
-                                    Zoom="XY" Pan="XY" />
+                    Series="{Binding DifferenceCartesianChart.Series}"
+                    LegendLocation="Bottom"
+                    Zoom="XY" Pan="XY" />
 
             </TabItem>
-            
+
             <TabItem Header="Статистика для заданий">
-   
-
-                
-                        <DockPanel Dock="Top" >
-
-                                         
-                            <lvc:CartesianChart
-                                Series="{Binding TaskCompletionCartesianChart.Series}"
-                                LegendLocation="Bottom"
-                                Zoom="XY" Pan="XY" 
-                                DockPanel.Dock="Top"
-                                Height="600"
-                                />
-                            
-
-                            <DataGrid DockPanel.Dock="Bottom"
-                                      Height="200"
-                                      
-                                      ScrollViewer.CanContentScroll="True"
-                                      AutoGenerateColumns="False"
-                                      CanUserAddRows="False"
-                                      SelectedIndex="{Binding SelectedTaskIdResult}"
-                                      ItemsSource="{Binding TaskList}">
-                                <DataGrid.Columns>
-                                    <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
-                                                        Binding="{Binding Id}" />
-                                    <DataGridTextColumn Header="Уровень сложности" IsReadOnly="True" Width="150"
-                                                        Binding="{Binding Complexity}" />
-                                    <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="True" Width="150"
-                                                        Binding="{Binding GuessingProbability}" />
-                                    <DataGridTextColumn Header="Баллы" IsReadOnly="True" Width="90"
-                                                        Binding="{Binding Weight}" />
-                                    <!--Selected msi's values list-->
-                                </DataGrid.Columns>
-                            </DataGrid>
 
 
-                        </DockPanel>
-                   
+                <DockPanel Dock="Top">
+
+
+                    <lvc:CartesianChart
+                        Series="{Binding TaskCompletionCartesianChart.Series}"
+                        LegendLocation="Bottom"
+                        Zoom="XY" Pan="XY"
+                        DockPanel.Dock="Top"
+                        Height="600" />
+
+
+                    <DataGrid DockPanel.Dock="Bottom"
+                              Height="200"
+
+                              ScrollViewer.CanContentScroll="True"
+                              AutoGenerateColumns="False"
+                              CanUserAddRows="False"
+                              SelectedIndex="{Binding SelectedTaskIdResult}"
+                              ItemsSource="{Binding TaskList}">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Header="Id" IsReadOnly="True" Width="90"
+                                                Binding="{Binding Id}" />
+                            <DataGridTextColumn Header="Уровень сложности" IsReadOnly="True" Width="150"
+                                                Binding="{Binding Complexity}" />
+                            <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="True" Width="150"
+                                                Binding="{Binding GuessingProbability}" />
+                            <DataGridTextColumn Header="Баллы" IsReadOnly="True" Width="90"
+                                                Binding="{Binding Weight}" />
+                            <!--Selected msi's values list-->
+                        </DataGrid.Columns>
+                    </DataGrid>
+
+
+                </DockPanel>
+
             </TabItem>
 
         </TabControl>
