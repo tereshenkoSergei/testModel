@@ -91,7 +91,7 @@ namespace TestModel.Code.Logic
             return taskList;
         }
         
-        public static List<Task> NormalStudentDistribution(
+        public static List<Task> NormalTaskDistribution(
             int amount, 
             double median, 
             double deviation, 
