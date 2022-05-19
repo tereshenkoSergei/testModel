@@ -53,21 +53,26 @@ namespace TestModel.Code.Logic
 
             for (int i = 0; i < amount; i++)
             {
-                
-            double randomDouble = random.NextDouble() * 8 - 4;
-            dbs.Add(randomDouble);
-            
-            double level = (1 / (deviation * Math.Pow( 2*Math.PI, 0.5))) 
-                *
-                Math.Pow(Math.E, - 0.5 * Math.Pow(randomDouble - median, 2)
-                                            /
-                                       (2*deviation*deviation));
-            
-            students.Add(new Student(level));
+                double randomDouble = random.NextDouble() * 8 - 4;
+               //randomDouble = i * (8/(double)amount) - 4;
+                dbs.Add(randomDouble);
+
+                double level = 1 / (deviation * Math.Sqrt(2 * Math.PI));
+
+                double temp = (median - randomDouble) / deviation;
+                temp = temp * temp;
+                temp = -0.5 * temp;
+                temp = Math.Pow(Math.E, temp);
+                if ((int) (random.NextDouble() * 1000) % 2 == 1) temp *= -1;
+                level = level * temp;
+
+                level *= 10;
+                level = Math.Round(level, 3);
+
+                level += median;
+                students.Add(new Student(level));
             }
 
-            Console.ReadLine();
-            
             return students;
         }
 
@@ -75,7 +80,7 @@ namespace TestModel.Code.Logic
             int amount,
             int minLevel,
             int maxLevel
-            )
+        )
         {
             List<Student> students = new List<Student>();
 
