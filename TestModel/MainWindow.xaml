@@ -13,7 +13,7 @@
 
             <TabItem Header="Задание параметров">
                 <DockPanel LastChildFill="False">
-                    <StackPanel DockPanel.Dock="Top" Height="300">
+                    <StackPanel DockPanel.Dock="Top" Height="350">
 
 
                         <DockPanel>
@@ -46,25 +46,23 @@
                             </DockPanel>
                             <Label DockPanel.Dock="Left" Content="" Width="170" />
                         </DockPanel>
-
-
                         <DockPanel>
-                            <Label> Метод распределения заданий</Label>
+                            <Label> Метод распределения испытуемых</Label>
                             <ComboBox Name="rasp" Height="30" Width="200"
                                       SelectedIndex="{Binding SelectedStudentGenerationMethodIndex}"
                                       VerticalAlignment="Top">
-                                <TextBlock Name="CommonStudentMethod">Равновероятный</TextBlock>
-                                <TextBlock Name="NormalStudentMethod">Нормальный</TextBlock>
-                                <TextBlock Name="PocketStudentMethod">По карманам</TextBlock>
+                                <TextBlock>Равновероятный</TextBlock>
+                                <TextBlock>Нормальный</TextBlock>
+                                <TextBlock>По карманам</TextBlock>
                             </ComboBox>
-                            <Label />
+                            <Label/>
                         </DockPanel>
 
                         <StackPanel Visibility="{Binding StudentCommonMethodVisibility}">
                             <DockPanel>
-                                <Label DockPanel.Dock="Left" Content="Минимальная сложность" Width="250" />
+                                <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="250" />
                                 <Slider
-                                    Value="{Binding MinComplexity}"
+                                    Value="{Binding MinLevel}"
                                     DockPanel.Dock="Left"
                                     Minimum="-4"
                                     Maximum="4"
@@ -74,15 +72,15 @@
                                     Width="50"
                                     PreviewTextInput="DoubleNumberValidationTextBox"
                                     DockPanel.Dock="Left"
-                                    Text="{Binding MinComplexity}" />
+                                    Text="{Binding MinLevel}" />
                                 <Label DockPanel.Dock="Left" />
                             </DockPanel>
                             <DockPanel>
-                                <Label DockPanel.Dock="Left" Content="Максимальная сложность" Width="250" />
+                                <Label DockPanel.Dock="Left" Content="Максимальнный уровень подготовки" Width="250" />
                                 <Slider
-                                    Value="{Binding MaxComplexity}"
+                                    Value="{Binding MaxLevel}"
                                     DockPanel.Dock="Left"
-                                    Minimum="{Binding MinComplexity}"
+                                    Minimum="{Binding MinLevel}"
                                     Maximum="4"
                                     Width="200" />
                                 <Label DockPanel.Dock="Left" />
@@ -90,7 +88,7 @@
                                     Width="50"
                                     PreviewTextInput="DoubleNumberValidationTextBox"
                                     DockPanel.Dock="Left"
-                                    Text="{Binding MaxComplexity}" />
+                                    Text="{Binding MaxLevel}" />
                                 <Label DockPanel.Dock="Left" />
                             </DockPanel>
                         </StackPanel>
@@ -125,10 +123,10 @@
                         </StackPanel>
 
                         <DockPanel>
-                            <Label> Метод распределения испытуемых</Label>
+                            <Label> Метод распределения заданий</Label>
                             <ComboBox Name="phonesList" Height="30" Width="200" SelectedValue="0"
-                                      VerticalAlignment="Top">
-                                <TextBlock>Равнокакой-то самый обычный</TextBlock>
+                                      VerticalAlignment="Top" >
+                                <TextBlock>Равновероятный</TextBlock>
                                 <TextBlock>Нормальный</TextBlock>
                                 <TextBlock>По карманам</TextBlock>
                             </ComboBox>
@@ -136,11 +134,11 @@
                         </DockPanel>
 
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальный уровень подготовки" Width="250" />
+                            <Label DockPanel.Dock="Left" Content="Максимальный уровень сложности" Width="250" />
                             <Slider
-                                Value="{Binding MaxLevel}"
+                                Value="{Binding MaxComplexity}"
                                 DockPanel.Dock="Left"
-                                Minimum="{Binding MinLevel}"
+                                Minimum="{Binding MinComplexity}"
                                 Maximum="4"
                                 Width="200" />
                             <Label DockPanel.Dock="Left" />
@@ -148,13 +146,13 @@
                                 Width="50"
                                 PreviewTextInput="DoubleNumberValidationTextBox"
                                 DockPanel.Dock="Left"
-                                Text="{Binding MaxLevel}" />
+                                Text="{Binding MaxComplexity}" />
                             <Label DockPanel.Dock="Left" Content="" />
                         </DockPanel>
                         <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Минимальный уровень подготовки" Width="250" />
+                            <Label DockPanel.Dock="Left" Content="Минимальный уровень сложности" Width="250" />
                             <Slider
-                                Value="{Binding MinLevel}"
+                                Value="{Binding MinComplexity}"
                                 DockPanel.Dock="Left"
                                 Minimum="-4"
                                 Maximum="4"
@@ -164,7 +162,7 @@
                                 Width="50"
                                 PreviewTextInput="DoubleNumberValidationTextBox"
                                 DockPanel.Dock="Left"
-                                Text="{Binding MinLevel}" />
+                                Text="{Binding MinComplexity}" />
                             <Label DockPanel.Dock="Left" />
                         </DockPanel>
                         <DockPanel>
@@ -258,6 +256,8 @@
 
                 </DockPanel>
             </TabItem>
+
+
             <TabItem Header="Распределение испытуемых">
                 <Grid>
                     <lvc:CartesianChart Series="{Binding StudentSeriesCollection}" LegendLocation="Left">
@@ -282,7 +282,6 @@
                     </lvc:CartesianChart>
                 </Grid>
             </TabItem>
-
             <TabItem Header="Результаты">
 
                 <lvc:CartesianChart
@@ -299,7 +298,6 @@
                     Zoom="XY" Pan="XY" />
 
             </TabItem>
-
             <TabItem Header="Статистика для заданий">
 
 
