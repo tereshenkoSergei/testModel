@@ -120,6 +120,9 @@ namespace TestModel.Code.Logic.Charts
             doubles.Sort();
             double minValue = doubles[0];
             double maxValue = doubles[doubles.Count - 1];
+
+            minValue = -4;
+            maxValue = 4;
             Double sizeOfPocket = Math.Abs((maxValue - minValue) / pockets);
 
             int[] distribution = new int[pockets];
@@ -139,7 +142,7 @@ namespace TestModel.Code.Logic.Charts
             }
 
             List<int> distributionBackup = new List<int>(distribution);
-            while (distributionBackup.Contains(0)) distributionBackup.Remove(0);
+           // while (distributionBackup.Contains(0)) distributionBackup.Remove(0);
 
 
             distribution = distributionBackup.ToArray();
