@@ -73,6 +73,8 @@
         <Compile Include="Code\Logic\StudentCreator.cs" />
         <Compile Include="Code\Logic\TaskCreator.cs" />
         <Compile Include="Code\MainViewModel.cs" />
+        <Compile Include="Code\MainViewModelMethots.cs" />
+        <Compile Include="Code\MainViewModelVars.cs" />
         <Compile Include="Code\RelayCommand.cs" />
         <Compile Include="Code\Result.cs" />
         <Compile Include="Code\Transacts\Student.cs" />
