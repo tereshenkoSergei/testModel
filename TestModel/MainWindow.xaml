@@ -55,7 +55,7 @@
                                 <TextBlock>Нормальный</TextBlock>
                                 <TextBlock>По карманам</TextBlock>
                             </ComboBox>
-                            <Label/>
+                            <Label />
                         </DockPanel>
 
                         <StackPanel Visibility="{Binding StudentCommonMethodVisibility}">
@@ -124,8 +124,8 @@
 
                         <DockPanel>
                             <Label> Метод распределения заданий</Label>
-                            <ComboBox Name="phonesList" Height="30" Width="200" SelectedValue="0"
-                                      VerticalAlignment="Top" >
+                            <ComboBox Height="30" Width="200" SelectedValue="0"
+                                      VerticalAlignment="Top">
                                 <TextBlock>Равновероятный</TextBlock>
                                 <TextBlock>Нормальный</TextBlock>
                                 <TextBlock>По карманам</TextBlock>
@@ -245,8 +245,6 @@
                                                     Binding="{Binding Complexity}" />
                                 <DataGridTextColumn Header="Вероятность угадывания" IsReadOnly="False" Width="150"
                                                     Binding="{Binding GuessingProbability}" />
-                                <DataGridTextColumn Header="Баллы" IsReadOnly="False" Width="90"
-                                                    Binding="{Binding Weight}" />
                             </DataGrid.Columns>
                         </DataGrid>
 
