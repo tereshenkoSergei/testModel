@@ -24,8 +24,12 @@ namespace TestModel.Code
         private int _selectedTaskId = 0;
         private int _selectedTaskIdResult = 0;
         private int _selectedStudentGenerationMethodIndex = 0;
+        private int _selectedTaskGenerationMethodIndex = 0;
         private double _studentMedian = 0;
         private double _studentDeviation = 1D;
+  
+        private double _taskMedian = 0;
+        private double _taskDeviation = 1D;
         private ObservableCollection<Student> _studentList;
         private ObservableCollection<Task> _taskList;
         private Student SelectedStudent { get; set; }
@@ -167,6 +171,27 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(StudentDeviation));
             }
         }
+        public double TaskMedian
+        {
+            get => Math.Round(_taskMedian, 3);
+            set
+            {
+                _taskMedian = value;
+                if (_taskMedian> 4) _taskMedian= 4;
+                if (_taskMedian < -4) _taskMedian= -4;
+                OnPropertyChanged(nameof(TaskMedian));
+            }
+        }
+
+        public double TaskDeviation
+        {
+            get => Math.Round(_taskDeviation, 3);
+            set
+            {
+                _taskMedian = value;
+                OnPropertyChanged(nameof(TaskDeviation));
+            }
+        }
 
         public ObservableCollection<Student> StudentList
         {
@@ -302,6 +327,13 @@ namespace TestModel.Code
         public Visibility StudentCommonMethodVisibility { get; set; }
         public Visibility StudentNormalMethodVisibility { get; set; }
         public Visibility StudentPocketMethodVisibility { get; set; }
+        
+        
+        public Visibility TaskCommonMethodVisibility { get; set; }
+        public Visibility TaskNormalMethodVisibility { get; set; }
+        public Visibility TaskPocketMethodVisibility { get; set; }
+        
+        
 
         public int SelectedStudentGenerationMethodIndex
         {
@@ -332,6 +364,38 @@ namespace TestModel.Code
                 OnPropertyChanged(nameof(SelectedStudentGenerationMethodIndex));
             }
         }
+        
+        public int SelectedTaskGenerationMethodIndex
+        {
+            get => _selectedTaskGenerationMethodIndex ;
+            set
+            {
+                _selectedTaskGenerationMethodIndex  = value;
+
+                TaskCommonMethodVisibility = Visibility.Collapsed;
+                TaskNormalMethodVisibility = Visibility.Collapsed;
+                TaskPocketMethodVisibility = Visibility.Collapsed;
+                switch (_selectedTaskGenerationMethodIndex )
+                {
+                    case 0:
+                        TaskCommonMethodVisibility = Visibility.Visible;
+                        break;
+                    case 1:
+                        TaskNormalMethodVisibility = Visibility.Visible;
+                        break;
+                    case 2:
+                        TaskPocketMethodVisibility = Visibility.Visible;
+                        break;
+                }
+
+                OnPropertyChanged(nameof(TaskCommonMethodVisibility));
+                OnPropertyChanged(nameof(TaskNormalMethodVisibility));
+                OnPropertyChanged(nameof(TaskPocketMethodVisibility));
+                OnPropertyChanged(nameof(SelectedStudentGenerationMethodIndex));
+            }
+        }
+        
+        
     }
 
 }

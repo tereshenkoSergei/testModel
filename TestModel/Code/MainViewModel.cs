@@ -46,6 +46,7 @@ namespace TestModel.Code
 
             TaskCompletionCartesianChart = new CartesianChart();
             SelectedStudentGenerationMethodIndex = 0;
+            SelectedTaskGenerationMethodIndex = 0;
         }
 
         [NotifyPropertyChangedInvocator]

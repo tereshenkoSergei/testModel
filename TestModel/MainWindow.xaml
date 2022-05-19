@@ -124,7 +124,8 @@
 
                         <DockPanel>
                             <Label> Метод распределения заданий</Label>
-                            <ComboBox Height="30" Width="200" SelectedValue="0"
+                            <ComboBox Height="30" Width="200"
+                                      SelectedIndex="{Binding SelectedTaskGenerationMethodIndex}"
                                       VerticalAlignment="Top">
                                 <TextBlock>Равновероятный</TextBlock>
                                 <TextBlock>Нормальный</TextBlock>
@@ -132,39 +133,70 @@
                             </ComboBox>
                             <Label />
                         </DockPanel>
+                        <StackPanel Visibility="{Binding TaskCommonMethodVisibility}">
+                            <DockPanel>
+                                <Label DockPanel.Dock="Left" Content="Максимальный уровень сложности" Width="250" />
+                                <Slider
+                                    Value="{Binding MaxComplexity}"
+                                    DockPanel.Dock="Left"
+                                    Minimum="{Binding MinComplexity}"
+                                    Maximum="4"
+                                    Width="200" />
+                                <Label DockPanel.Dock="Left" />
+                                <TextBox
+                                    Width="50"
+                                    PreviewTextInput="DoubleNumberValidationTextBox"
+                                    DockPanel.Dock="Left"
+                                    Text="{Binding MaxComplexity}" />
+                                <Label DockPanel.Dock="Left" Content="" />
+                            </DockPanel>
+                            <DockPanel>
+                                <Label DockPanel.Dock="Left" Content="Минимальный уровень сложности" Width="250" />
+                                <Slider
+                                    Value="{Binding MinComplexity}"
+                                    DockPanel.Dock="Left"
+                                    Minimum="-4"
+                                    Maximum="4"
+                                    Width="200" />
+                                <Label DockPanel.Dock="Left" />
+                                <TextBox
+                                    Width="50"
+                                    PreviewTextInput="DoubleNumberValidationTextBox"
+                                    DockPanel.Dock="Left"
+                                    Text="{Binding MinComplexity}" />
+                                <Label DockPanel.Dock="Left" />
+                            </DockPanel>
+                        </StackPanel>
+                        <StackPanel Visibility="{Binding TaskNormalMethodVisibility}">
+                            <DockPanel>
+                                <Label DockPanel.Dock="Left" Content="Медиана" Width="250" />
+                                <Slider
+                                    Value="{Binding TaskMedian}"
+                                    DockPanel.Dock="Left"
+                                    Minimum="-4"
+                                    Maximum="4"
+                                    Width="200" />
+                                <Label DockPanel.Dock="Left" />
+                                <TextBox
+                                    Width="50"
+                                    PreviewTextInput="DoubleNumberValidationTextBox"
+                                    DockPanel.Dock="Left"
+                                    Text="{Binding TaskMedian}" />
+                                <Label DockPanel.Dock="Left" />
+                            </DockPanel>
+                            <DockPanel>
+                                <Label Content="Отклонение" Width="250" />
+                                <Slider
+                                    Value="{Binding TaskDeviation}"
+                                    Minimum="0.5"
+                                    Maximum="4"
+                                    Width="200" />
+                                <Label Content="{Binding TaskDeviation}" />
+                                <Label Content="" />
+                            </DockPanel>
+                        </StackPanel>
 
-                        <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Максимальный уровень сложности" Width="250" />
-                            <Slider
-                                Value="{Binding MaxComplexity}"
-                                DockPanel.Dock="Left"
-                                Minimum="{Binding MinComplexity}"
-                                Maximum="4"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" />
-                            <TextBox
-                                Width="50"
-                                PreviewTextInput="DoubleNumberValidationTextBox"
-                                DockPanel.Dock="Left"
-                                Text="{Binding MaxComplexity}" />
-                            <Label DockPanel.Dock="Left" Content="" />
-                        </DockPanel>
-                        <DockPanel>
-                            <Label DockPanel.Dock="Left" Content="Минимальный уровень сложности" Width="250" />
-                            <Slider
-                                Value="{Binding MinComplexity}"
-                                DockPanel.Dock="Left"
-                                Minimum="-4"
-                                Maximum="4"
-                                Width="200" />
-                            <Label DockPanel.Dock="Left" />
-                            <TextBox
-                                Width="50"
-                                PreviewTextInput="DoubleNumberValidationTextBox"
-                                DockPanel.Dock="Left"
-                                Text="{Binding MinComplexity}" />
-                            <Label DockPanel.Dock="Left" />
-                        </DockPanel>
+                        <StackPanel Visibility="{Binding TaskNormalMethodVisibility}" />
                         <DockPanel>
                             <Label DockPanel.Dock="Left" Content="Максимальная вероятность угадывания" Width="250" />
                             <Slider
