@@ -90,5 +90,45 @@ namespace TestModel.Code.Logic
 
             return taskList;
         }
+        
+        public static List<Task> NormalStudentDistribution(
+            int amount, 
+            double median, 
+            double deviation, 
+            int minGuessingProbability,
+            int maxGuessingProbability)
+        {
+            List<double> dbs = new List<double>();
+            Random random = new Random();
+            List<Task> tasks = new List<Task>();
+
+            for (int i = 0; i < amount; i++)
+            {
+                double randomDouble = random.NextDouble() * 8 - 4;
+                //randomDouble = i * (8/(double)amount) - 4;
+                dbs.Add(randomDouble);
+
+                double complexity = 1 / (deviation * Math.Sqrt(2 * Math.PI));
+
+                double temp = (median - randomDouble) / deviation;
+                temp = temp * temp;
+                temp = -0.5 * temp;
+                temp = Math.Pow(Math.E, temp);
+                if ((int) (random.NextDouble() * 1000) % 2 == 1) temp *= -1;
+                complexity = complexity * temp;
+
+                complexity *= 10;
+                complexity = Math.Round(complexity, 3);
+
+                complexity += median;
+                double guessingProbability = Math.Round(
+                    minGuessingProbability +
+                    (maxGuessingProbability - minGuessingProbability) * random.NextDouble(), 3);
+                
+                tasks.Add(new Task(complexity, guessingProbability));
+            }
+
+            return tasks;
+        }
     }
 }
