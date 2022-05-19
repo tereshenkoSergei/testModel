@@ -95,8 +95,8 @@ namespace TestModel.Code.Logic
             int amount, 
             double median, 
             double deviation, 
-            int minGuessingProbability,
-            int maxGuessingProbability)
+            double minGuessingProbability,
+            double maxGuessingProbability)
         {
             List<double> dbs = new List<double>();
             Random random = new Random();

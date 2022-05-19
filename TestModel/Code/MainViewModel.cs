@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Runtime.CompilerServices;
 using System.Text.RegularExpressions;
@@ -83,6 +84,23 @@ namespace TestModel.Code
 
         public void GenerateTransacts(object param)
         {
+            GenerateStudents();
+            GenerateTasks();
+            //StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
+            //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
+            //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
+
+
+            FormatCharts();
+
+            OnPropertyChanged(nameof(ResultSeriesCollection));
+            OnPropertyChanged(nameof(StudentSeriesCollection));
+            OnPropertyChanged(nameof(TaskSeriesCollection));
+            OnPropertyChanged(nameof(MainCartesianChart));
+        }
+
+        private void GenerateStudents()
+        {
             switch (SelectedStudentGenerationMethodIndex)
             {
                 case 0:
@@ -98,24 +116,34 @@ namespace TestModel.Code
                 case 2:
                     break;
             }
+        }
 
-
-            //StudentList = StudentCreator.NormalStudentDistribution(StudentAmount, 0, 1);
-            //StudentList = StudentCreator.EquidistantStudentDistribution(10, 20, -4, 4);
-            //StudentList = StudentCreator.NormalStudentDistribution(1000, 0, 1);
-            TaskList = new ObservableCollection<Task>(
-                TaskCreator.GenerateTasks(TaskAmount,
-                    MinComplexity,
-                    MaxComplexity,
-                    MinGuessingProbability / 100,
-                    MaxGuessingProbability / 100));
-
-            FormatCharts();
-
-            OnPropertyChanged(nameof(ResultSeriesCollection));
-            OnPropertyChanged(nameof(StudentSeriesCollection));
-            OnPropertyChanged(nameof(TaskSeriesCollection));
-            OnPropertyChanged(nameof(MainCartesianChart));
+        private void GenerateTasks()
+        {
+            switch (SelectedTaskGenerationMethodIndex)
+            {
+                case 0:
+                    TaskList = new ObservableCollection<Task>(
+                        TaskCreator.GenerateTasks(TaskAmount,
+                            MinComplexity,
+                            MaxComplexity,
+                            MinGuessingProbability / 100,
+                            MaxGuessingProbability / 100));
+                    break;
+                case 1:
+                    TaskList = new ObservableCollection<Task>(
+                        
+                        TaskCreator.NormalTaskDistribution(
+                            TaskAmount,
+                            TaskMedian,
+                            TaskDeviation,
+                            MinGuessingProbability,
+                            MaxGuessingProbability
+                            ));
+                    break;
+                case 2:
+                    break;
+            }
         }
 
         private void FormatCharts()
